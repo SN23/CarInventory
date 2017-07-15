@@ -15,22 +15,35 @@ public class CarInventory {
 
         ArrayList<Car> cars = new ArrayList<>();
         
+        String choice;
+        
 //      Car Properties  
         String vin;
         String make;
         String model;
         String year;
         String color;
-        String choice;
         double price;
+        String weight;
+        String driveTrain;
+        String bodyStyle;
+        String mileage;
+        String fuelType;
         
 //      Engine Properties
         String displacement;
         String numOfCylinders;
         String horsepower;
         String torque;
+        
+//      Transmission Properties
+        String type;
+        String transModel;
+        String numOfGears;
+        
         Car car;
         Engine engine;
+        Transmission transmission;
         
         Scanner scanner = new Scanner(System.in);
         
@@ -62,6 +75,21 @@ public class CarInventory {
                 System.out.println("Enter Price");
                 price = Double.parseDouble(scanner.nextLine());
                 
+                System.out.println("Enter weight in lbs");
+                weight = scanner.nextLine();
+                
+                System.out.println("Enter drivetrain type");
+                driveTrain = scanner.nextLine();
+                
+                System.out.println("Enter body style");
+                bodyStyle = scanner.nextLine();
+                
+                System.out.println("Enter mileage");
+                mileage = scanner.nextLine();
+                
+                System.out.println("Enter fuel type");
+                fuelType = scanner.nextLine();
+                
                 System.out.println("Enter engine displacement");
                 displacement = scanner.nextLine();
                 
@@ -74,23 +102,42 @@ public class CarInventory {
                 System.out.println("Enter engine torque");
                 torque = scanner.nextLine();
                 
+                System.out.println("Enter transmission type");
+                type = scanner.nextLine();
+                
+                System.out.println("Enter transmission model");
+                transModel = scanner.nextLine();
+                
+                System.out.println("Enter number of gears");
+                numOfGears = scanner.nextLine();
             
                 car = new Car();
                 engine = new Engine();
+                transmission = new Transmission();
                 
+                car.setVin(vin);
                 car.setMake(make);
                 car.setModel(model);
                 car.setYear(year);
                 car.setColor(color);
                 car.setPrice(price);
-                car.setVin(vin);
+                car.setWeight(weight);
+                car.setDriveTrain(driveTrain);
+                car.setBodyStyle(bodyStyle);
+                car.setMileage(mileage);
+                car.setFuelType(fuelType);
                 
                 engine.setDisplacement(displacement);
                 engine.setNumOfCylinders(numOfCylinders);
                 engine.setHorsepower(horsepower);
                 engine.setTorque(torque);
-        
+                
+                transmission.setType(type);
+                transmission.setModel(transModel);
+                transmission.setNumOfGears(numOfGears);
+               
                 car.setEngine(engine);
+                car.setTransmission(transmission);
                 
                 cars.add(car);
             }
@@ -119,16 +166,29 @@ public class CarInventory {
                 System.out.println("---------------Inventory---------------");
                  
                 for(Car vehicle: cars){
+                    System.out.println("---Vehicle Specs---");
                     System.out.println("VIN: " + vehicle.getVin());
                     System.out.println("Make: " + vehicle.getMake());
                     System.out.println("Model: " + vehicle.getModel());
                     System.out.println("Year: " + vehicle.getYear());
                     System.out.println("Color: " + vehicle.getColor());
                     System.out.println("Price: $" + vehicle.getPrice());
+                    System.out.println("Weight: "+vehicle.getWeight());
+                    System.out.println("Drive train: " + vehicle.getDriveTrain());
+                    System.out.println("Body style: "+vehicle.getBodyStyle());
+                    System.out.println("Gas Mileage: "+ vehicle.getMileage() + "MPG");
+                    System.out.println("Fuel Type: " +  vehicle.getFuelType());
+                    System.out.println("---Engine Specs---");
                     System.out.println("Engine Displacement: " + vehicle.getEngine().getDisplacement() + "L");
                     System.out.println("Engine Number of Cylinders: " + vehicle.getEngine().getNumOfCylinders());
                     System.out.println("Engine Horsepower: " + vehicle.getEngine().getHorsepower() + "hp");
                     System.out.println("Engine Torque: " + vehicle.getEngine().getTorque() + "ft-lbs");
+                    System.out.println("---Transmission Specs---");
+                    System.out.println("Type: " + vehicle.getTransmission().getType());
+                    System.out.println("Model: " + vehicle.getTransmission().getModel());
+                    System.out.println("Number of Gears: " + vehicle.getTransmission().getNumOfGears());
+                    
+             
                     System.out.println("------------------------------------");
                     
                     totalInventoryValue += vehicle.getPrice();
