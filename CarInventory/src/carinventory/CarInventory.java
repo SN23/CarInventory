@@ -13,12 +13,18 @@ public class CarInventory {
      */
     public static void main(String[] args) {
 
-        ArrayList<Car> cars = new ArrayList<Car>();
+        ArrayList<Car> cars = new ArrayList<>();
+        
+//      Car Properties  
+        String vin;
         String make;
         String model;
         String year;
         String color;
         String choice;
+        double price;
+        
+//      Engine Properties
         String displacement;
         String numOfCylinders;
         String horsepower;
@@ -38,6 +44,9 @@ public class CarInventory {
         
             if(choice.equalsIgnoreCase("A")){
             
+                System.out.println("Enter vin");
+                vin = scanner.nextLine();
+                
                 System.out.println("Enter car make");
                 make = scanner.nextLine();
         
@@ -49,6 +58,9 @@ public class CarInventory {
         
                 System.out.println("Enter car color");
                 color = scanner.nextLine();
+                
+                System.out.println("Enter Price");
+                price = Double.parseDouble(scanner.nextLine());
                 
                 System.out.println("Enter engine displacement");
                 displacement = scanner.nextLine();
@@ -70,6 +82,8 @@ public class CarInventory {
                 car.setModel(model);
                 car.setYear(year);
                 car.setColor(color);
+                car.setPrice(price);
+                car.setVin(vin);
                 
                 engine.setDisplacement(displacement);
                 engine.setNumOfCylinders(numOfCylinders);
@@ -81,21 +95,46 @@ public class CarInventory {
                 cars.add(car);
             }
             
+            
+            if(choice.equalsIgnoreCase("D")){
+                
+                System.out.println("Enter VIN number of vehicle to be removed");
+                vin = scanner.nextLine();
+                
+                for(int i=0; i<cars.size(); i++){
+                    if(cars.get(i).getVin().equals(vin)){
+                        cars.remove(i);
+                    }
+                    
+                    else{
+                        System.out.println("Vehicle not found");
+                    }
+                }
+                
+            }
+            
             if(choice.equalsIgnoreCase("L")){
                 
+                double totalInventoryValue = 0;
                 System.out.println("---------------Inventory---------------");
-
-                for(Car automobile: cars){
-                    System.out.println("Make: " + automobile.getMake());
-                    System.out.println("Model: " + automobile.getModel());
-                    System.out.println("Year: " + automobile.getYear());
-                    System.out.println("Color: " + automobile.getColor());
-                    System.out.println("Engine Displacement: " + automobile.getEngine().getDisplacement());
-                    System.out.println("Engine Number of Cylinders: " + automobile.getEngine().getNumOfCylinders());
-                    System.out.println("Engine Horsepower: " + automobile.getEngine().getHorsepower());
-                    System.out.println("Engine Torque: " + automobile.getEngine().getTorque());
+                 
+                for(Car vehicle: cars){
+                    System.out.println("VIN: " + vehicle.getVin());
+                    System.out.println("Make: " + vehicle.getMake());
+                    System.out.println("Model: " + vehicle.getModel());
+                    System.out.println("Year: " + vehicle.getYear());
+                    System.out.println("Color: " + vehicle.getColor());
+                    System.out.println("Price: $" + vehicle.getPrice());
+                    System.out.println("Engine Displacement: " + vehicle.getEngine().getDisplacement() + "L");
+                    System.out.println("Engine Number of Cylinders: " + vehicle.getEngine().getNumOfCylinders());
+                    System.out.println("Engine Horsepower: " + vehicle.getEngine().getHorsepower() + "hp");
+                    System.out.println("Engine Torque: " + vehicle.getEngine().getTorque() + "ft-lbs");
                     System.out.println("------------------------------------");
+                    
+                    totalInventoryValue += vehicle.getPrice();
                 }
+                
+                System.out.println("Total Inventory Value: $ " + totalInventoryValue);
             }
             
             
