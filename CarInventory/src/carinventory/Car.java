@@ -12,7 +12,13 @@ public class Car {
     String year;
     String color;
     double Price;
+    String weight;
+    String driveTrain;
+    String bodyStyle;
+    String mileage;
+    String fuelType;
     Engine engine;
+    Transmission transmission;
 
     public String getVin() {
         return vin;
@@ -62,6 +68,46 @@ public class Car {
         this.Price = Price;
     }
 
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getDriveTrain() {
+        return driveTrain;
+    }
+
+    public void setDriveTrain(String driveTrain) {
+        this.driveTrain = driveTrain;
+    }
+
+    public String getBodyStyle() {
+        return bodyStyle;
+    }
+
+    public void setBodyStyle(String bodyStyle) {
+        this.bodyStyle = bodyStyle;
+    }
+
+    public String getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(String mileage) {
+        this.mileage = mileage;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+    }
+
     public Engine getEngine() {
         return engine;
     }
@@ -69,4 +115,14 @@ public class Car {
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
+
+    public Transmission getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(Transmission transmission) {
+        this.transmission = transmission;
+    }
+    
+    
 }

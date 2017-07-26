@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package carinventory;
 
 /**
@@ -11,11 +6,29 @@ package carinventory;
  */
 public class Engine {
     
-    
+    String VIN;
     String displacement;
     String numOfCylinders;
     String horsepower;
     String torque;
+    String model;
+    
+    
+    public String getVIN() {
+        return VIN;
+    }
+
+    public void setVIN(String VIN) {
+        this.VIN = VIN;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
 
     public String getDisplacement() {
         return displacement;

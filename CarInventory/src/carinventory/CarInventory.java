@@ -33,6 +33,7 @@ public class CarInventory {
 //      Engine Properties
         String displacement;
         String numOfCylinders;
+        String engineModel;
         String horsepower;
         String torque;
         
@@ -96,6 +97,9 @@ public class CarInventory {
                 System.out.println("Enter number of cylinders");
                 numOfCylinders = scanner.nextLine();
                 
+                System.out.println("Enter model of Engine");
+                engineModel= scanner.nextLine();
+                
                 System.out.println("Enter engine horsepower");
                 horsepower = scanner.nextLine();
                 
@@ -129,17 +133,27 @@ public class CarInventory {
                 
                 engine.setDisplacement(displacement);
                 engine.setNumOfCylinders(numOfCylinders);
+                engine.setModel(engineModel);
                 engine.setHorsepower(horsepower);
                 engine.setTorque(torque);
+                engine.setVIN(vin);
                 
                 transmission.setType(type);
                 transmission.setModel(transModel);
                 transmission.setNumOfGears(numOfGears);
+                transmission.setVin(vin);
                
                 car.setEngine(engine);
                 car.setTransmission(transmission);
+               
                 
                 cars.add(car);
+                
+                DBAccess.addCar(car);
+                DBAccess.addEngine(engine);
+                DBAccess.addTransmission(transmission);
+
+
             }
             
             
@@ -176,7 +190,7 @@ public class CarInventory {
                     System.out.println("Weight: "+vehicle.getWeight());
                     System.out.println("Drive train: " + vehicle.getDriveTrain());
                     System.out.println("Body style: "+vehicle.getBodyStyle());
-                    System.out.println("Gas Mileage: "+ vehicle.getMileage() + "MPG");
+                    System.out.println("Mileage: "+ vehicle.getMileage());
                     System.out.println("Fuel Type: " +  vehicle.getFuelType());
                     System.out.println("---Engine Specs---");
                     System.out.println("Engine Displacement: " + vehicle.getEngine().getDisplacement() + "L");
