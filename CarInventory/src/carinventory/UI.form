@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jTabbedPane" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jTabbedPane" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="addCarPanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Add Car">
+                <Property name="tabTitle" type="java.lang.String" value="Add Car"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                      <Component id="carLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="engineLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="fuelTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mileageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="colorLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="priceLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="yearLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="modelLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="makeLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="vinLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bodystyleLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="weightLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="bodystyleTextField" alignment="1" pref="133" max="32767" attributes="0"/>
+                                  <Component id="mileageTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="fuelTypeTextField" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="drivetrainLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="vinTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="makeTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="modelTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="yearTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="colorTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="priceTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="weightTextField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="driveTrainTextField" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="addCarButton" min="-2" pref="151" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="transmissionLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="engineModelLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="horsepowerLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="torqueLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="transModelLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="numOfGearsLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="numOfCylindersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="displacementLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="displacementTextField" max="32767" attributes="0"/>
+                                      <Component id="numOfCylindersTextField" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="engineModelTextField" alignment="1" min="-2" pref="135" max="-2" attributes="0"/>
+                                      <Component id="horsepowerTextField" alignment="1" min="-2" pref="135" max="-2" attributes="0"/>
+                                      <Component id="torqueTextField" alignment="1" min="-2" pref="135" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="typeLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="transTypeTextField" min="-2" pref="175" max="-2" attributes="0"/>
+                                  <Component id="transModelTextField" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
+                                  <Component id="numOfGearsTextField" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="carLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="engineLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="vinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="displacementLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="vinTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="displacementTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="makeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numOfCylindersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="makeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numOfCylindersTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="modelLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="engineModelLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="modelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="engineModelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="yearLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="horsepowerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="yearTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="horsepowerTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="colorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="torqueLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="colorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="torqueTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="priceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="priceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="weightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="transmissionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="weightTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="drivetrainLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="driveTrainTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="transTypeTextField" min="-2" max="-2" attributes="0"/>
+                              <Component id="typeLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bodystyleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bodystyleTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="transModelTextField" min="-2" max="-2" attributes="0"/>
+                              <Component id="transModelLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="numOfGearsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="numOfGearsTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="mileageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mileageTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="fuelTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addCarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fuelTypeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="carLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="24" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Car"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="engineLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="24" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Engine"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="transmissionLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="24" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Transmission"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="vinLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="VIN"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="makeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Make"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="modelLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Model"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="yearLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Year"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="colorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Color"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="priceLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Price"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="weightLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Weight"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="drivetrainLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drivetrain"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bodystyleLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bodystyle"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="mileageLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mileage"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="fuelTypeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fuel Type"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="displacementLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Displacement"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numOfCylindersLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Number of Cylinders"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="engineModelLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Model"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="horsepowerLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Horsepower"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="torqueLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Torque"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="typeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Type"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="transModelLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Model"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numOfGearsLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Number of Gears"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="addCarButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Car"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addCarButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="vinTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="makeTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="modelTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="yearTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="colorTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="priceTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="weightTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="driveTrainTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="bodystyleTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="mileageTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="fuelTypeTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="displacementTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="numOfCylindersTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="engineModelTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="horsepowerTextField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="horsepowerTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="torqueTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="transTypeTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="transModelTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="numOfGearsTextField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numOfGearsTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="deleteCarPanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Delete Car">
+                <Property name="tabTitle" type="java.lang.String" value="Delete Car"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="462" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JPanel" name="listInventoryPanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="List Inventory">
+                <Property name="tabTitle" type="java.lang.String" value="List Inventory"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="462" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
