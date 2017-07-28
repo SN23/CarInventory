@@ -104,6 +104,12 @@ public class UI extends javax.swing.JFrame {
         transModelTextField = new javax.swing.JTextField();
         numOfGearsTextField = new javax.swing.JTextField();
         deleteCarPanel = new javax.swing.JPanel();
+        enterVINLabel = new javax.swing.JLabel();
+        vinDeleteCarTextField = new javax.swing.JTextField();
+        jScrollPane = new javax.swing.JScrollPane();
+        carDetailsTextArea = new javax.swing.JTextArea();
+        removeCarButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
         listInventoryPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -260,7 +266,7 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carLabel)
                     .addComponent(engineLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vinLabel)
                     .addComponent(displacementLabel)
@@ -301,19 +307,19 @@ public class UI extends javax.swing.JFrame {
                     .addComponent(weightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(drivetrainLabel)
-                        .addComponent(driveTrainTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(drivetrainLabel)
+                    .addComponent(driveTrainTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(transTypeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(typeLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bodystyleLabel)
-                    .addComponent(bodystyleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(transModelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(transModelLabel)))
+                        .addComponent(transModelLabel))
+                    .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(bodystyleLabel)
+                        .addComponent(bodystyleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -332,15 +338,59 @@ public class UI extends javax.swing.JFrame {
 
         jTabbedPane.addTab("Add Car", addCarPanel);
 
+        enterVINLabel.setText("Enter VIN");
+
+        carDetailsTextArea.setColumns(20);
+        carDetailsTextArea.setRows(5);
+        jScrollPane.setViewportView(carDetailsTextArea);
+
+        removeCarButton.setText("Remove Car");
+        removeCarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeCarButtonActionPerformed(evt);
+            }
+        });
+
+        searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout deleteCarPanelLayout = new javax.swing.GroupLayout(deleteCarPanel);
         deleteCarPanel.setLayout(deleteCarPanelLayout);
         deleteCarPanelLayout.setHorizontalGroup(
             deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGroup(deleteCarPanelLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane)
+                    .addGroup(deleteCarPanelLayout.createSequentialGroup()
+                        .addComponent(enterVINLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(vinDeleteCarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(searchButton)
+                        .addContainerGap(59, Short.MAX_VALUE))))
+            .addGroup(deleteCarPanelLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addComponent(removeCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         deleteCarPanelLayout.setVerticalGroup(
             deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 462, Short.MAX_VALUE)
+            .addGroup(deleteCarPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enterVINLabel)
+                    .addComponent(vinDeleteCarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchButton))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(removeCarButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("Delete Car", deleteCarPanel);
@@ -353,7 +403,7 @@ public class UI extends javax.swing.JFrame {
         );
         listInventoryPanelLayout.setVerticalGroup(
             listInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 462, Short.MAX_VALUE)
+            .addGap(0, 466, Short.MAX_VALUE)
         );
 
         jTabbedPane.addTab("List Inventory", listInventoryPanel);
@@ -446,6 +496,39 @@ public class UI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_numOfGearsTextFieldActionPerformed
 
+    private void removeCarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCarButtonActionPerformed
+        String vin = vinDeleteCarTextField.getText();
+        DBAccess.deleteCar(vin);
+    }//GEN-LAST:event_removeCarButtonActionPerformed
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        
+        String vin = vinDeleteCarTextField.getText();
+        Car car1 = DBAccess.retrieveByVIN(vin);
+        carDetailsTextArea.setText("------------------------------Vehicle Specs------------------------------" + "\n" 
+                + "VIN: " + car1.getVin() + "\n"
+                + "Make: " + car1.getMake() + "\n"
+                + "Model: " + car1.getModel() + "\n"
+                + "Year: " + car1.getYear() + "\n"
+                + "Color: " + car1.getColor() + "\n"
+                + "Price: $" + car1.getPrice() + "\n"   
+                + "Weight: "+car1.getWeight() + "\n"        
+                + "Drive train: " + car1.getDriveTrain() + "\n"
+                + "Body style: "+car1.getBodyStyle() + "\n"
+                + "Mileage: "+ car1.getMileage() + "\n"
+                + "Fuel Type: " +  car1.getFuelType() + "\n"
+                + "------------------------------Engine Specs------------------------------" + "\n"
+                + "Engine Displacement: " + car1.getEngine().getDisplacement() + "L" + "\n"
+                + "Engine Number of Cylinders: " + car1.getEngine().getNumOfCylinders() + "\n"
+                + "Engine Horsepower: " + car1.getEngine().getHorsepower() + "hp" + "\n"
+                + "Engine Torque: " + car1.getEngine().getTorque() + "ft-lbs" + "\n"
+                + "---------------------------Transmission Specs----------------------------" + "\n"
+                + "Type: " + car1.getTransmission().getType() + "\n"
+                + "Model: " + car1.getTransmission().getModel() + "\n"
+                + "Number of Gears: " + car1.getTransmission().getNumOfGears() );
+        
+    }//GEN-LAST:event_searchButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -486,6 +569,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JPanel addCarPanel;
     private javax.swing.JLabel bodystyleLabel;
     private javax.swing.JTextField bodystyleTextField;
+    private javax.swing.JTextArea carDetailsTextArea;
     private javax.swing.JLabel carLabel;
     private javax.swing.JLabel colorLabel;
     private javax.swing.JTextField colorTextField;
@@ -497,10 +581,12 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel engineLabel;
     private javax.swing.JLabel engineModelLabel;
     private javax.swing.JTextField engineModelTextField;
+    private javax.swing.JLabel enterVINLabel;
     private javax.swing.JLabel fuelTypeLabel;
     private javax.swing.JTextField fuelTypeTextField;
     private javax.swing.JLabel horsepowerLabel;
     private javax.swing.JTextField horsepowerTextField;
+    private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JTabbedPane jTabbedPane;
     private javax.swing.JPanel listInventoryPanel;
     private javax.swing.JLabel makeLabel;
@@ -515,6 +601,8 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JTextField numOfGearsTextField;
     private javax.swing.JLabel priceLabel;
     private javax.swing.JTextField priceTextField;
+    private javax.swing.JButton removeCarButton;
+    private javax.swing.JButton searchButton;
     private javax.swing.JLabel torqueLabel;
     private javax.swing.JTextField torqueTextField;
     private javax.swing.JLabel transModelLabel;
@@ -522,6 +610,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JTextField transTypeTextField;
     private javax.swing.JLabel transmissionLabel;
     private javax.swing.JLabel typeLabel;
+    private javax.swing.JTextField vinDeleteCarTextField;
     private javax.swing.JLabel vinLabel;
     private javax.swing.JTextField vinTextField;
     private javax.swing.JLabel weightLabel;

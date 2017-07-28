@@ -157,7 +157,7 @@
                           <Component id="carLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="engineLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="vinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="displacementLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -205,22 +205,22 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="drivetrainLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="driveTrainTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="drivetrainLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="driveTrainTextField" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="transTypeTextField" min="-2" max="-2" attributes="0"/>
                               <Component id="typeLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="bodystyleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="bodystyleTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="transModelTextField" min="-2" max="-2" attributes="0"/>
                               <Component id="transModelLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="bodystyleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="bodystyleTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -431,15 +431,85 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="enterVINLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="vinDeleteCarTextField" min="-2" pref="290" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="searchButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="59" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
+                      <Component id="removeCarButton" min="-2" pref="153" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="462" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="enterVINLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="vinDeleteCarTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane" min="-2" pref="361" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="removeCarButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="enterVINLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enter VIN"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="vinDeleteCarTextField">
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="carDetailsTextArea">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="removeCarButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Remove Car"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeCarButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="searchButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="listInventoryPanel">
           <Constraints>
@@ -458,7 +528,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="462" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="466" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
