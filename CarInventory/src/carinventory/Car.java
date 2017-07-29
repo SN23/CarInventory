@@ -125,4 +125,30 @@ public class Car {
     }
     
     
+    @Override
+    public String toString(){
+        return (("------------------------------Vehicle Specs------------------------------" + "\n" 
+                + "VIN: " + this.getVin() + "\n"
+                + "Make: " + this.getMake() + "\n"
+                + "Model: " + this.getModel() + "\n"
+                + "Year: " + this.getYear() + "\n"
+                + "Color: " + this.getColor() + "\n"
+                + "Price: $" + this.getPrice() + "\n"   
+                + "Weight: "+this.getWeight() + "\n"        
+                + "Drive train: " + this.getDriveTrain() + "\n"
+                + "Body style: "+this.getBodyStyle() + "\n"
+                + "Mileage: "+ this.getMileage() + "\n"
+                + "Fuel Type: " +  this.getFuelType() + "\n"
+                + "------------------------------Engine Specs------------------------------" + "\n"
+                + "Engine Displacement: " + this.getEngine().getDisplacement() + "L" + "\n"
+                + "Engine Number of Cylinders: " + this.getEngine().getNumOfCylinders() + "\n"
+                + "Engine Horsepower: " + this.getEngine().getHorsepower() + "hp" + "\n"
+                + "Engine Torque: " + this.getEngine().getTorque() + "ft-lbs" + "\n"
+                + "---------------------------Transmission Specs----------------------------" + "\n"
+                + "Type: " + this.getTransmission().getType() + "\n"
+                + "Model: " + this.getTransmission().getModel() + "\n"
+                + "Number of Gears: " + this.getTransmission().getNumOfGears()+ "\n" 
+                + "------------------------------------------------------------------------") + "\n");
+    }
+    
 }

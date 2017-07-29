@@ -233,20 +233,20 @@ public class DBAccess {
       }
       
       /**
-       * Builds a list of cars
+       * Builds a arrayList of cars
        * @param rs a ResultSet
        * @return ArrayList of added car(s)
        * @throws SQLException card not built
        */
-      public static ArrayList<Car> buildCarList(ResultSet rs) throws SQLException 
+      public static ArrayList<Car> buildCars(ResultSet rs) throws SQLException 
       {
          ArrayList<Car> cars = new ArrayList<>();
-//         Car car = buildCar(rs);
-//         cars.add(car);
+         Car car = buildCar(rs);
+         cars.add(car);
          while(rs.next()){
              
-              Car car = buildCar(rs);
-              cars.add(car);
+              Car car1 = buildCar(rs);
+              cars.add(car1);
          }
             return cars;
     } 
@@ -315,7 +315,7 @@ public class DBAccess {
         
         
         
-            /**
+     /**
        * Searches for a car by VIN
        * If SQLException is caught, exception is logged
        * If NumberFormatException is caught, returns false
@@ -348,6 +348,44 @@ public class DBAccess {
           
           return car;
       }   
+        
+        
+    
+        
+    /**
+       * Lists all the cars in the DB
+       * If SQLException is caught, exception is logged
+       * If NumberFormatException is caught, returns false
+       * @param VIN of car
+       * @return ArrayList of card(s) who match the power searched
+       */
+        public static ArrayList<Car> retrieveCars() {
+          
+          ArrayList<Car> cars = new ArrayList<>();
+          String query = ("select car.*, engine.DISPLACEMENT, engine.NUMOFCYLINDERS, engine.MODEL, engine.Horsepower, engine.TORQUE, transmission.TYPE, transmission.MODEL, transmission.NUMOFGEARS "
+                  + "from car "
+                  + "join engine on car.VIN = engine.VIN "
+                  + "join transmission on car.VIN = transmission.VIN ");
+          
+          System.out.println("retrieveCars query= " + query);
+          LOGGER.info("retrieveCars query= " + query);
+          try{
+          conn = DBConnection.getMyConnection();
+          Statement stmt = conn.createStatement();
+          ResultSet rs = stmt.executeQuery(query);
+          if (!rs.next())
+              cars = null;   //no matching car found
+          else{
+             cars = buildCars(rs);
+          }
+          stmt.close();}
+      catch (SQLException sql)
+              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);}
+          
+          return cars;
+      }    
+        
+        
         
       
 }
