@@ -506,7 +506,27 @@ public class UI extends javax.swing.JFrame {
         DBAccess.addCar(car);
         DBAccess.addEngine(engine);
         DBAccess.addTransmission(transmission);
-                
+        
+        vinTextField.setText("");
+        makeTextField.setText("");
+        modelTextField.setText("");
+        yearTextField.setText("");
+        colorTextField.setText("");
+        priceTextField.setText("");
+        weightTextField.setText("");
+        driveTrainTextField.setText("");
+        bodystyleTextField.setText("");
+        mileageTextField.setText("");
+        fuelTypeTextField.setText("");
+        displacementTextField.setText("");
+        numOfCylindersTextField.setText("");
+        engineModelTextField.setText("");
+        horsepowerTextField.setText("");
+        torqueTextField.setText("");
+        transTypeTextField.setText("");
+        transModelTextField.setText("");
+        numOfGearsTextField.setText("");
+                        
     }//GEN-LAST:event_addCarButtonActionPerformed
 
     private void horsepowerTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horsepowerTextFieldActionPerformed
@@ -526,7 +546,12 @@ public class UI extends javax.swing.JFrame {
         
         String vin = vinDeleteCarTextField.getText();
         Car car1 = DBAccess.retrieveByVIN(vin);
-        carDetailsTextArea.setText(car1.toString());
+        if(car1==null){
+            carDetailsTextArea.setText("No Matching VIN Found");
+        }
+        else{
+            carDetailsTextArea.setText(car1.toString());
+        }
         
     }//GEN-LAST:event_searchButtonActionPerformed
 
@@ -535,11 +560,17 @@ public class UI extends javax.swing.JFrame {
         cars = DBAccess.retrieveCars();
         String output = "";
 
-        for(int i=0; i<cars.size(); i++){
-            
-            output+= cars.get(i).toString();
+        if(cars!=null){
+            for(int i=0; i<cars.size(); i++){
+                
+                output+= cars.get(i).toString();
+            }
+            carListTextArea.setText(output);
         }
-        carListTextArea.setText(output);
+        
+        else{
+            carListTextArea.setText("No Cars in Inventory");
+        }
     }//GEN-LAST:event_loadButtonActionPerformed
 
     /**
