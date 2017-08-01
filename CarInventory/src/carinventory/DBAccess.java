@@ -104,7 +104,7 @@ public class DBAccess {
             + QUOTE + engine.getHorsepower() + QUOTE + ","
             + QUOTE + engine.getTorque() + QUOTE;
             
-          String query=("insert into engine (VIN, DISPLACEMENT, NUMOFCYLINDERS, MODEL, HORSEPOWER, TORQUE) values (" + valueString + ")");
+          String query=("insert into engine (VIN, DISPLACEMENT, NUMOFCYLINDERS, ENGINE_MODEL, HORSEPOWER, TORQUE) values (" + valueString + ")");
           System.out.println("addEngine query is " + query);
           LOGGER.info("addEngine query is = " + query);
                   
@@ -138,7 +138,7 @@ public class DBAccess {
             + QUOTE + transmission.getModel()+ QUOTE + "," 
             + QUOTE + transmission.getNumOfGears() + QUOTE;
             
-          String query=("insert into transmission (VIN, TYPE, MODEL, NUMOFGEARS) values (" + valueString + ")");
+          String query=("insert into transmission (VIN, TYPE, TRANSMISSION_MODEL, NUMOFGEARS) values (" + valueString + ")");
           System.out.println("InsertDeck query is " + query);
           LOGGER.info("InsertDeck query is = " + query);
                   
@@ -185,12 +185,12 @@ public class DBAccess {
                 
                 String displacement = rs.getString("DISPLACEMENT");
                 String numOfCylinders = rs.getString("NUMOFCYLINDERS");
-                String engineModel = rs.getString("MODEL");
+                String engineModel = rs.getString("ENGINE_MODEL");
                 String horsepower = rs.getString("HORSEPOWER");
                 String torque = rs.getString("TORQUE");
                 
                 String type = rs.getString("TYPE");
-                String transModel = rs.getString("MODEL");
+                String transModel = rs.getString("TRANSMISSION_MODEL");
                 String numOfGears = rs.getString("NUMOFGEARS");
                 
                 Car car = new Car();
@@ -325,7 +325,7 @@ public class DBAccess {
         public static Car retrieveByVIN(String VIN) {
           
           Car car = new Car();
-          String query = ("select car.*, engine.DISPLACEMENT, engine.NUMOFCYLINDERS, engine.MODEL, engine.Horsepower, engine.TORQUE, transmission.TYPE, transmission.MODEL, transmission.NUMOFGEARS "
+          String query = ("select car.*, engine.DISPLACEMENT, engine.NUMOFCYLINDERS, engine.ENGINE_MODEL, engine.Horsepower, engine.TORQUE, transmission.TYPE, transmission.TRANSMISSION_MODEL, transmission.NUMOFGEARS "
                   + "from car "
                   + "join engine on car.VIN = engine.VIN "
                   + "join transmission on car.VIN = transmission.VIN "
@@ -362,7 +362,7 @@ public class DBAccess {
         public static ArrayList<Car> retrieveCars() {
           
           ArrayList<Car> cars = new ArrayList<>();
-          String query = ("select car.*, engine.DISPLACEMENT, engine.NUMOFCYLINDERS, engine.MODEL, engine.Horsepower, engine.TORQUE, transmission.TYPE, transmission.MODEL, transmission.NUMOFGEARS "
+          String query = ("select car.*, engine.DISPLACEMENT, engine.NUMOFCYLINDERS, engine.ENGINE_MODEL, engine.Horsepower, engine.TORQUE, transmission.TYPE, transmission.TRANSMISSION_MODEL, transmission.NUMOFGEARS "
                   + "from car "
                   + "join engine on car.VIN = engine.VIN "
                   + "join transmission on car.VIN = transmission.VIN ");
@@ -414,7 +414,7 @@ public class DBAccess {
               return false;}
               
           String query2 = ("UPDATE engine "
-                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", DISPLACEMENT =" + QUOTE + displacement + QUOTE + ", NUMOFCYLINDERS =" + QUOTE + numOfCylinders + QUOTE + ", HORSEPOWER =" + QUOTE + horsepower + QUOTE + ", TORQUE =" + QUOTE + torque + QUOTE 
+                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", DISPLACEMENT =" + QUOTE + displacement + QUOTE + ", NUMOFCYLINDERS =" + QUOTE + numOfCylinders + QUOTE + ", ENGINE_MODEL=" + QUOTE + engineModel + QUOTE + ", HORSEPOWER =" + QUOTE + horsepower + QUOTE + ", TORQUE =" + QUOTE + torque + QUOTE 
                   + "WHERE VIN =" + QUOTE + VIN + QUOTE );
           System.out.println("update engine query= " + query2);
           LOGGER.info("update engine query= " + query2);
@@ -428,7 +428,7 @@ public class DBAccess {
               return false;}
           
           String query3 = ("UPDATE transmission "
-                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", TYPE =" + QUOTE + transType + QUOTE + ", MODEL =" + QUOTE + transModel + QUOTE + ", NUMOFGEARS =" + QUOTE + numOfGears + QUOTE 
+                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", TYPE =" + QUOTE + transType + QUOTE + ", TRANSMISSION_MODEL =" + QUOTE + transModel + QUOTE + ", NUMOFGEARS =" + QUOTE + numOfGears + QUOTE 
                   + "WHERE VIN =" + QUOTE + VIN + QUOTE );
           System.out.println("delete from transmission table query= " + query3);
           LOGGER.info("delete from transmission table query= " + query3);
