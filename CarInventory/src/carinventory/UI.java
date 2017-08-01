@@ -42,6 +42,8 @@ public class UI extends javax.swing.JFrame {
         Engine engine;
         Transmission transmission;
         
+        String vinUpdate;
+        
   
     /**
      * Creates new form UI
@@ -59,7 +61,7 @@ public class UI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane = new javax.swing.JTabbedPane();
+        updateTabbedPane = new javax.swing.JTabbedPane();
         addCarPanel = new javax.swing.JPanel();
         carLabel = new javax.swing.JLabel();
         engineLabel = new javax.swing.JLabel();
@@ -110,6 +112,53 @@ public class UI extends javax.swing.JFrame {
         carDetailsTextArea = new javax.swing.JTextArea();
         removeCarButton = new javax.swing.JButton();
         searchButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        vinUpdateTabTextField = new javax.swing.JTextField();
+        searchUpdateTabButton = new javax.swing.JButton();
+        addCarPanel1 = new javax.swing.JPanel();
+        carLabel1 = new javax.swing.JLabel();
+        transmissionLabel1 = new javax.swing.JLabel();
+        vinLabel1 = new javax.swing.JLabel();
+        makeLabel1 = new javax.swing.JLabel();
+        modelLabel1 = new javax.swing.JLabel();
+        yearLabel1 = new javax.swing.JLabel();
+        colorLabel1 = new javax.swing.JLabel();
+        priceLabel1 = new javax.swing.JLabel();
+        weightLabel1 = new javax.swing.JLabel();
+        drivetrainLabel1 = new javax.swing.JLabel();
+        bodystyleLabel1 = new javax.swing.JLabel();
+        mileageLabel1 = new javax.swing.JLabel();
+        fuelTypeLabel1 = new javax.swing.JLabel();
+        displacementLabel1 = new javax.swing.JLabel();
+        numOfCylindersLabel1 = new javax.swing.JLabel();
+        engineModelLabel1 = new javax.swing.JLabel();
+        horsepowerLabel1 = new javax.swing.JLabel();
+        torqueLabel1 = new javax.swing.JLabel();
+        typeLabel1 = new javax.swing.JLabel();
+        transModelLabel1 = new javax.swing.JLabel();
+        numOfGearsLabel1 = new javax.swing.JLabel();
+        updateCarButton = new javax.swing.JButton();
+        vinUpdateTextField = new javax.swing.JTextField();
+        modelUpdateTextField = new javax.swing.JTextField();
+        yearUpdateTextField = new javax.swing.JTextField();
+        colorUpdateTextField = new javax.swing.JTextField();
+        priceUpdateTextField = new javax.swing.JTextField();
+        weightUpdateTextField = new javax.swing.JTextField();
+        mileageUpdateTextField = new javax.swing.JTextField();
+        displacementUpdateTextField = new javax.swing.JTextField();
+        engineModelUpdateTextField = new javax.swing.JTextField();
+        horsepowerUpdateTextField = new javax.swing.JTextField();
+        torqueUpdateTextField = new javax.swing.JTextField();
+        transModelUpdateTextField = new javax.swing.JTextField();
+        driveTrainUpdateComboBox = new javax.swing.JComboBox<>();
+        bodyStyleUpdateComboBox = new javax.swing.JComboBox<>();
+        fuelTypeUpdateComboBox = new javax.swing.JComboBox<>();
+        numOfCylindersUpdateComboBox = new javax.swing.JComboBox<>();
+        transTypeUpdateComboBox = new javax.swing.JComboBox<>();
+        numOfGearsUpdateComboBox = new javax.swing.JComboBox<>();
+        makeUpdateComboBox = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
         listInventoryPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         carListTextArea = new javax.swing.JTextArea();
@@ -237,57 +286,56 @@ public class UI extends javax.swing.JFrame {
                     .addComponent(colorTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(priceTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(weightTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(makeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, 163, Short.MAX_VALUE)
+                    .addComponent(makeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, 170, Short.MAX_VALUE)
                     .addComponent(bodyStyleComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mileageTextField)
                     .addComponent(fuelTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(driveTrainComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(engineModelLabel)
+                                    .addComponent(horsepowerLabel)
+                                    .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(typeLabel)
+                                        .addComponent(torqueLabel)
+                                        .addComponent(transModelLabel)))
+                                .addGap(214, 214, 214))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                                .addComponent(transmissionLabel)
+                                .addGap(71, 71, 71))))
                     .addGroup(addCarPanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(addCarPanelLayout.createSequentialGroup()
                                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(addCarPanelLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(numOfCylindersLabel)
-                                            .addComponent(displacementLabel))
+                                        .addGap(24, 24, 24)
+                                        .addComponent(numOfCylindersLabel))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(displacementTextField)
-                                            .addComponent(engineModelTextField)
-                                            .addComponent(horsepowerTextField)
-                                            .addComponent(torqueTextField)
-                                            .addComponent(numOfCylindersComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(transTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(transModelTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addContainerGap())
+                                        .addComponent(displacementLabel)
+                                        .addGap(10, 10, 10)))
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(displacementTextField)
+                                    .addComponent(engineModelTextField)
+                                    .addComponent(horsepowerTextField)
+                                    .addComponent(torqueTextField)
+                                    .addComponent(numOfCylindersComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                .addGap(0, 32, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(engineModelLabel)
-                                            .addComponent(horsepowerLabel)
-                                            .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(typeLabel)
-                                                .addComponent(torqueLabel)
-                                                .addComponent(transModelLabel)))
-                                        .addGap(214, 214, 214))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                        .addComponent(transmissionLabel)
-                                        .addGap(71, 71, 71))))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(numOfGearsLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(transTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(transModelTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(numOfGearsLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap())))
         );
         addCarPanelLayout.setVerticalGroup(
@@ -297,7 +345,7 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carLabel)
                     .addComponent(engineLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vinLabel)
                     .addComponent(displacementLabel)
@@ -374,7 +422,7 @@ public class UI extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        jTabbedPane.addTab("Add Car", addCarPanel);
+        updateTabbedPane.addTab("Add Car", addCarPanel);
 
         enterVINLabel.setText("Enter VIN");
 
@@ -402,20 +450,20 @@ public class UI extends javax.swing.JFrame {
         deleteCarPanelLayout.setHorizontalGroup(
             deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteCarPanelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(194, 194, 194)
+                .addComponent(removeCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(deleteCarPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane)
+                    .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(deleteCarPanelLayout.createSequentialGroup()
                         .addComponent(enterVINLabel)
                         .addGap(18, 18, 18)
                         .addComponent(vinDeleteCarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(searchButton)
-                        .addContainerGap(115, Short.MAX_VALUE))))
-            .addGroup(deleteCarPanelLayout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(removeCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(searchButton)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         deleteCarPanelLayout.setVerticalGroup(
             deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,13 +474,337 @@ public class UI extends javax.swing.JFrame {
                     .addComponent(vinDeleteCarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchButton))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(removeCarButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(removeCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        jTabbedPane.addTab("Delete Car", deleteCarPanel);
+        updateTabbedPane.addTab("Delete Car", deleteCarPanel);
+
+        jLabel1.setText("Enter VIN");
+
+        searchUpdateTabButton.setText("Search");
+        searchUpdateTabButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchUpdateTabButtonActionPerformed(evt);
+            }
+        });
+
+        carLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        carLabel1.setText("Car");
+
+        transmissionLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        transmissionLabel1.setText("Transmission");
+
+        vinLabel1.setText("VIN");
+
+        makeLabel1.setText("Make");
+
+        modelLabel1.setText("Model");
+
+        yearLabel1.setText("Year");
+
+        colorLabel1.setText("Color");
+
+        priceLabel1.setText("Price");
+
+        weightLabel1.setText("Weight");
+
+        drivetrainLabel1.setText("Drivetrain");
+
+        bodystyleLabel1.setText("Bodystyle");
+
+        mileageLabel1.setText("Mileage");
+
+        fuelTypeLabel1.setText("Fuel Type");
+
+        displacementLabel1.setText("Displacement");
+
+        numOfCylindersLabel1.setText("Number of Cylinders");
+
+        engineModelLabel1.setText("Model");
+
+        horsepowerLabel1.setText("Horsepower");
+
+        torqueLabel1.setText("Torque");
+
+        typeLabel1.setText("Type");
+
+        transModelLabel1.setText("Model");
+
+        numOfGearsLabel1.setText("Number of Gears");
+
+        updateCarButton.setText("Update");
+        updateCarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateCarButtonActionPerformed(evt);
+            }
+        });
+
+        yearUpdateTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yearUpdateTextFieldActionPerformed(evt);
+            }
+        });
+
+        horsepowerUpdateTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                horsepowerUpdateTextFieldActionPerformed(evt);
+            }
+        });
+
+        transModelUpdateTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transModelUpdateTextFieldActionPerformed(evt);
+            }
+        });
+
+        driveTrainUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RWD", "FWD", "AWD", "4x4", "4WD" }));
+
+        bodyStyleUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coupe", "Sedan", "SUV", "Convertible", "Pickup", "Hatchback", "Wagon", "Minivan", "Van" }));
+
+        fuelTypeUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gas", "Diesel", "E85", "Electric", "Natural Gas" }));
+
+        numOfCylindersUpdateComboBox.setEditable(true);
+        numOfCylindersUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "8", "10", "12" }));
+
+        transTypeUpdateComboBox.setEditable(true);
+        transTypeUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatic", "AutoManual", "CVT" }));
+
+        numOfGearsUpdateComboBox.setEditable(true);
+        numOfGearsUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        makeUpdateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari", "Fiat", "Ford", "Genesis", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "Mercury", "MINI", "Mitsubishi", "Nissan", "Pontiac", "Porsche", "RAM", "Rolls-Royce", "Saturn", "Scion", "Smart", "Subaru", "Tesla", "Toyota", "Volkswagen", "Volvo" }));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel2.setText("Engine");
+
+        javax.swing.GroupLayout addCarPanel1Layout = new javax.swing.GroupLayout(addCarPanel1);
+        addCarPanel1.setLayout(addCarPanel1Layout);
+        addCarPanel1Layout.setHorizontalGroup(
+            addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(drivetrainLabel1)
+                    .addComponent(bodystyleLabel1)
+                    .addComponent(mileageLabel1)
+                    .addComponent(fuelTypeLabel1)
+                    .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(priceLabel1)
+                        .addComponent(weightLabel1))
+                    .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(yearLabel1)
+                        .addComponent(colorLabel1))
+                    .addComponent(modelLabel1)
+                    .addComponent(makeLabel1)
+                    .addComponent(vinLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(vinUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(modelUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(yearUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(colorUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(priceUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(weightUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(makeUpdateComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, 162, Short.MAX_VALUE)
+                    .addComponent(bodyStyleUpdateComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mileageUpdateTextField)
+                    .addComponent(fuelTypeUpdateComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(driveTrainUpdateComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(addCarPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(carLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addCarPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                                            .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(horsepowerLabel1)
+                                                .addComponent(torqueLabel1))
+                                            .addGap(214, 214, 214))
+                                        .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                            .addGap(6, 6, 6)
+                                            .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(typeLabel1)
+                                                .addComponent(transModelLabel1))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(transModelUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(transTypeUpdateComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addContainerGap())
+                                        .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                            .addComponent(engineModelLabel1)
+                                            .addGap(63, 63, 63)
+                                            .addComponent(engineModelUpdateTextField)
+                                            .addContainerGap()))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                                        .addComponent(transmissionLabel1)
+                                        .addGap(70, 70, 70))))
+                            .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                .addComponent(numOfCylindersLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(numOfCylindersUpdateComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())))
+                    .addGroup(addCarPanel1Layout.createSequentialGroup()
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                .addGap(154, 154, 154)
+                                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(horsepowerUpdateTextField)
+                                    .addComponent(torqueUpdateTextField)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(updateCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24))
+                            .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(numOfGearsLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                                .addComponent(numOfGearsUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(displacementLabel1)
+                                .addGap(18, 18, 18)
+                                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(displacementUpdateTextField))))
+                        .addContainerGap())))
+        );
+        addCarPanel1Layout.setVerticalGroup(
+            addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addCarPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(carLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(vinUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(vinLabel1)
+                        .addComponent(displacementLabel1))
+                    .addComponent(displacementUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(modelUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modelLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCarPanel1Layout.createSequentialGroup()
+                                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(makeUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(makeLabel1))
+                                .addGap(0, 7, Short.MAX_VALUE))
+                            .addGroup(addCarPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(numOfCylindersUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(numOfCylindersLabel1))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(engineModelLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(engineModelUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)))
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(transmissionLabel1)
+                    .addGroup(addCarPanel1Layout.createSequentialGroup()
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(yearUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(yearLabel1)
+                            .addComponent(horsepowerUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(horsepowerLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(colorUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(colorLabel1)
+                            .addComponent(torqueUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(torqueLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(priceUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(priceLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(weightUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weightLabel1))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(bodystyleLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanel1Layout.createSequentialGroup()
+                            .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(driveTrainUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(drivetrainLabel1)
+                                .addComponent(typeLabel1)
+                                .addComponent(transTypeUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(bodyStyleUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(transModelLabel1))))
+                    .addComponent(transModelUpdateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(mileageLabel1)
+                    .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(mileageUpdateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(numOfGearsLabel1)
+                        .addComponent(numOfGearsUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(updateCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(addCarPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(fuelTypeLabel1)
+                        .addComponent(fuelTypeUpdateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(14, 14, 14))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addGap(40, 40, 40)
+                .addComponent(vinUpdateTabTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchUpdateTabButton)
+                .addContainerGap(92, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(addCarPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(vinUpdateTabTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(searchUpdateTabButton))
+                .addContainerGap(521, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 56, Short.MAX_VALUE)
+                    .addComponent(addCarPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 56, Short.MAX_VALUE)))
+        );
+
+        updateTabbedPane.addTab("Update", jPanel1);
 
         carListTextArea.setEditable(false);
         carListTextArea.setColumns(20);
@@ -450,34 +822,39 @@ public class UI extends javax.swing.JFrame {
         listInventoryPanel.setLayout(listInventoryPanelLayout);
         listInventoryPanelLayout.setHorizontalGroup(
             listInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
             .addGroup(listInventoryPanelLayout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addGap(186, 186, 186)
+                .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, listInventoryPanelLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         listInventoryPanelLayout.setVerticalGroup(
             listInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, listInventoryPanelLayout.createSequentialGroup()
-                .addComponent(loadButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
-        jTabbedPane.addTab("List Inventory", listInventoryPanel);
+        updateTabbedPane.addTab("List Inventory", listInventoryPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane)
+                .addComponent(updateTabbedPane)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane)
+                .addComponent(updateTabbedPane)
                 .addContainerGap())
         );
 
@@ -544,18 +921,8 @@ public class UI extends javax.swing.JFrame {
         DBAccess.addEngine(engine);
         DBAccess.addTransmission(transmission);
         
-        vinTextField.setText("");
-        modelTextField.setText("");
-        yearTextField.setText("");
-        colorTextField.setText("");
-        priceTextField.setText("");
-        weightTextField.setText("");
-        mileageTextField.setText("");
-        displacementTextField.setText("");
-        engineModelTextField.setText("");
-        horsepowerTextField.setText("");
-        torqueTextField.setText("");
-        transModelTextField.setText("");
+        clearFields();
+        
                         
     }//GEN-LAST:event_addCarButtonActionPerformed
 
@@ -603,6 +970,84 @@ public class UI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_transModelTextFieldActionPerformed
 
+    private void updateCarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateCarButtonActionPerformed
+        
+        String newVin = vinUpdateTextField.getText();
+        String newMake = makeUpdateComboBox.getSelectedItem().toString();
+        String newModel = modelUpdateTextField.getText();
+        String newYear = yearUpdateTextField.getText();
+        String newColor = colorUpdateTextField.getText();
+        double newPrice = Double.parseDouble(priceUpdateTextField.getText());
+        String newWeight = weightUpdateTextField.getText();
+        String newDriveTrain = driveTrainUpdateComboBox.getSelectedItem().toString();
+        String newBodyStyle = bodyStyleUpdateComboBox.getSelectedItem().toString();
+        String newMileage = mileageUpdateTextField.getText();
+        String newFuelType = fuelTypeUpdateComboBox.getSelectedItem().toString();
+        String newDisplacement = displacementUpdateTextField.getText();
+        String newNumOfCylinders = numOfCylindersUpdateComboBox.getSelectedItem().toString();
+        String newEngineModel = engineModelUpdateTextField.getText();
+        String newHorsepower = horsepowerUpdateTextField.getText();
+        String newTorque = torqueUpdateTextField.getText();
+        String newTransType = transTypeUpdateComboBox.getSelectedItem().toString();
+        String newTransModel = transModelUpdateTextField.getText();
+        String newNumOfGears = numOfGearsUpdateComboBox.getSelectedItem().toString();
+        
+        DBAccess.updateCar(vinUpdate, newVin, newMake, newModel, newYear, newColor, newPrice, newWeight, newDriveTrain, newBodyStyle, newMileage, newFuelType, newDisplacement, newNumOfCylinders, newHorsepower, newTorque, newEngineModel, newTransType, newTransModel, newNumOfGears);
+    }//GEN-LAST:event_updateCarButtonActionPerformed
+
+    private void horsepowerUpdateTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horsepowerUpdateTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_horsepowerUpdateTextFieldActionPerformed
+
+    private void transModelUpdateTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transModelUpdateTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transModelUpdateTextFieldActionPerformed
+
+    private void searchUpdateTabButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchUpdateTabButtonActionPerformed
+        vinUpdate = vinUpdateTabTextField.getText();
+        Car car1 = DBAccess.retrieveByVIN(vinUpdate);
+        vinUpdateTextField.setText(car1.getVin());
+        makeUpdateComboBox.setSelectedItem(car1.getMake());
+        modelUpdateTextField.setText(car1.getModel());
+        yearUpdateTextField.setText(car1.getYear());
+        colorUpdateTextField.setText(car1.getColor());
+        priceUpdateTextField.setText(Double.toString(car1.getPrice()));
+        weightUpdateTextField.setText(car1.getWeight());
+        driveTrainUpdateComboBox.setSelectedItem(car1.getDriveTrain());
+        bodyStyleUpdateComboBox.setSelectedItem(car1.getBodyStyle());
+        mileageUpdateTextField.setText(car1.getMileage());
+        fuelTypeUpdateComboBox.setSelectedItem(car1.getFuelType());
+        displacementUpdateTextField.setText(car1.getEngine().getDisplacement());
+        numOfCylindersUpdateComboBox.setSelectedItem(car1.getEngine().getNumOfCylinders());
+        engineModelUpdateTextField.setText(car1.getEngine().getModel());
+        horsepowerUpdateTextField.setText(car1.getEngine().getHorsepower());
+        torqueUpdateTextField.setText(car1.getEngine().getTorque());
+        transTypeUpdateComboBox.setSelectedItem(car1.getTransmission().getType());
+        transModelUpdateTextField.setText(car1.getTransmission().getModel());
+        numOfGearsUpdateComboBox.setSelectedItem(car1.getTransmission().getNumOfGears());
+    }//GEN-LAST:event_searchUpdateTabButtonActionPerformed
+
+    private void yearUpdateTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearUpdateTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yearUpdateTextFieldActionPerformed
+
+    public void clearFields(){
+        
+        vinTextField.setText("");
+        modelTextField.setText("");
+        yearTextField.setText("");
+        colorTextField.setText("");
+        priceTextField.setText("");
+        weightTextField.setText("");
+        mileageTextField.setText("");
+        displacementTextField.setText("");
+        engineModelTextField.setText("");
+        horsepowerTextField.setText("");
+        torqueTextField.setText("");
+        transModelTextField.setText("");
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -642,58 +1087,105 @@ public class UI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCarButton;
     private javax.swing.JPanel addCarPanel;
+    private javax.swing.JPanel addCarPanel1;
     private javax.swing.JComboBox<String> bodyStyleComboBox;
+    private javax.swing.JComboBox<String> bodyStyleUpdateComboBox;
     private javax.swing.JLabel bodystyleLabel;
+    private javax.swing.JLabel bodystyleLabel1;
     private javax.swing.JTextArea carDetailsTextArea;
     private javax.swing.JLabel carLabel;
+    private javax.swing.JLabel carLabel1;
     private javax.swing.JTextArea carListTextArea;
     private javax.swing.JLabel colorLabel;
+    private javax.swing.JLabel colorLabel1;
     private javax.swing.JTextField colorTextField;
+    private javax.swing.JTextField colorUpdateTextField;
     private javax.swing.JPanel deleteCarPanel;
     private javax.swing.JLabel displacementLabel;
+    private javax.swing.JLabel displacementLabel1;
     private javax.swing.JTextField displacementTextField;
+    private javax.swing.JTextField displacementUpdateTextField;
     private javax.swing.JComboBox<String> driveTrainComboBox;
+    private javax.swing.JComboBox<String> driveTrainUpdateComboBox;
     private javax.swing.JLabel drivetrainLabel;
+    private javax.swing.JLabel drivetrainLabel1;
     private javax.swing.JLabel engineLabel;
     private javax.swing.JLabel engineModelLabel;
+    private javax.swing.JLabel engineModelLabel1;
     private javax.swing.JTextField engineModelTextField;
+    private javax.swing.JTextField engineModelUpdateTextField;
     private javax.swing.JLabel enterVINLabel;
     private javax.swing.JComboBox<String> fuelTypeComboBox;
     private javax.swing.JLabel fuelTypeLabel;
+    private javax.swing.JLabel fuelTypeLabel1;
+    private javax.swing.JComboBox<String> fuelTypeUpdateComboBox;
     private javax.swing.JLabel horsepowerLabel;
+    private javax.swing.JLabel horsepowerLabel1;
     private javax.swing.JTextField horsepowerTextField;
+    private javax.swing.JTextField horsepowerUpdateTextField;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane;
     private javax.swing.JPanel listInventoryPanel;
     private javax.swing.JButton loadButton;
     private javax.swing.JComboBox<String> makeComboBox;
     private javax.swing.JLabel makeLabel;
+    private javax.swing.JLabel makeLabel1;
+    private javax.swing.JComboBox<String> makeUpdateComboBox;
     private javax.swing.JLabel mileageLabel;
+    private javax.swing.JLabel mileageLabel1;
     private javax.swing.JTextField mileageTextField;
+    private javax.swing.JTextField mileageUpdateTextField;
     private javax.swing.JLabel modelLabel;
+    private javax.swing.JLabel modelLabel1;
     private javax.swing.JTextField modelTextField;
+    private javax.swing.JTextField modelUpdateTextField;
     private javax.swing.JComboBox<String> numOfCylindersComboBox;
     private javax.swing.JLabel numOfCylindersLabel;
+    private javax.swing.JLabel numOfCylindersLabel1;
+    private javax.swing.JComboBox<String> numOfCylindersUpdateComboBox;
     private javax.swing.JComboBox<String> numOfGearsComboBox;
     private javax.swing.JLabel numOfGearsLabel;
+    private javax.swing.JLabel numOfGearsLabel1;
+    private javax.swing.JComboBox<String> numOfGearsUpdateComboBox;
     private javax.swing.JLabel priceLabel;
+    private javax.swing.JLabel priceLabel1;
     private javax.swing.JTextField priceTextField;
+    private javax.swing.JTextField priceUpdateTextField;
     private javax.swing.JButton removeCarButton;
     private javax.swing.JButton searchButton;
+    private javax.swing.JButton searchUpdateTabButton;
     private javax.swing.JLabel torqueLabel;
+    private javax.swing.JLabel torqueLabel1;
     private javax.swing.JTextField torqueTextField;
+    private javax.swing.JTextField torqueUpdateTextField;
     private javax.swing.JLabel transModelLabel;
+    private javax.swing.JLabel transModelLabel1;
     private javax.swing.JTextField transModelTextField;
+    private javax.swing.JTextField transModelUpdateTextField;
     private javax.swing.JComboBox<String> transTypeComboBox;
+    private javax.swing.JComboBox<String> transTypeUpdateComboBox;
     private javax.swing.JLabel transmissionLabel;
+    private javax.swing.JLabel transmissionLabel1;
     private javax.swing.JLabel typeLabel;
+    private javax.swing.JLabel typeLabel1;
+    private javax.swing.JButton updateCarButton;
+    private javax.swing.JTabbedPane updateTabbedPane;
     private javax.swing.JTextField vinDeleteCarTextField;
     private javax.swing.JLabel vinLabel;
+    private javax.swing.JLabel vinLabel1;
     private javax.swing.JTextField vinTextField;
+    private javax.swing.JTextField vinUpdateTabTextField;
+    private javax.swing.JTextField vinUpdateTextField;
     private javax.swing.JLabel weightLabel;
+    private javax.swing.JLabel weightLabel1;
     private javax.swing.JTextField weightTextField;
+    private javax.swing.JTextField weightUpdateTextField;
     private javax.swing.JLabel yearLabel;
+    private javax.swing.JLabel yearLabel1;
     private javax.swing.JTextField yearTextField;
+    private javax.swing.JTextField yearUpdateTextField;
     // End of variables declaration//GEN-END:variables
 }
