@@ -165,7 +165,7 @@ public class DBAccess {
        * If no car is created, will return null
        * If SQLException occurs, exception is logged (returns null)
        * @param rs a ResultSet
-       * @return a created Card based on search parameters
+       * @return a created Car based on search parameters
        */
       private static Car buildCar(ResultSet rs)
       {       
@@ -258,7 +258,7 @@ public class DBAccess {
         * If no car is deleted will return false
         * If SQLException occurs, exception is logged (returns false)
         * @param VIN deletes car based on VIN
-        * @return deleted card from specified tables in query
+        * @return deleted car from specified tables in query
         */
         public static Boolean deleteCar(String VIN)
          {
@@ -320,7 +320,7 @@ public class DBAccess {
        * If SQLException is caught, exception is logged
        * If NumberFormatException is caught, returns false
        * @param VIN of car
-       * @return ArrayList of card(s) who match the power searched
+       * @return ArrayList of cars
        */
         public static Car retrieveByVIN(String VIN) {
           
@@ -357,7 +357,7 @@ public class DBAccess {
        * If SQLException is caught, exception is logged
        * If NumberFormatException is caught, returns false
        * @param VIN of car
-       * @return ArrayList of card(s) who match the power searched
+       * @return ArrayList of cars
        */
         public static ArrayList<Car> retrieveCars() {
           
@@ -387,5 +387,66 @@ public class DBAccess {
         
         
         
+    /**
+        * Updates the information on selected car
+        * If no car is found will return false
+        * If SQLException occurs, exception is logged (returns false)
+        * @param VIN updates car based on VIN
+        * @return updates car from specified tables in query
+        */
+        public static Boolean updateCar(String VIN, String newVIN, String make, String model, String year, String color, double price, String weight, String drivetrain, String bodystyle, String mileage, String fuelType, String displacement, String numOfCylinders, String horsepower, String torque, String engineModel, String transType, String transModel, String numOfGears)
+        {
+
+          int result1,result2,result3;
+          
+          String query1 = ("UPDATE car "
+                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", MAKE =" + QUOTE + make + QUOTE + ", MODEL =" + QUOTE + model + QUOTE + ", YEAR =" + QUOTE + year + QUOTE + ", COLOR =" + QUOTE + color + QUOTE + ", PRICE =" +QUOTE+ price + QUOTE + ", WEIGHT =" + QUOTE + weight + QUOTE + ", DRIVETRAIN =" + QUOTE + drivetrain + QUOTE + ", BODYSTYLE =" + QUOTE + bodystyle + QUOTE + ", MILEAGE =" + QUOTE + mileage + QUOTE + ", FUELTYPE =" + QUOTE + fuelType + QUOTE 
+                  + "WHERE VIN =" + QUOTE + VIN + QUOTE );
+          System.out.println("update car query= " + query1);
+          LOGGER.info("update car query= " + query1);
+          try{
+          conn = DBConnection.getMyConnection();
+          Statement stmt = conn.createStatement();
+          result1 = stmt.executeUpdate(query1);
+          }
+          catch (SQLException sql)
+              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+              return false;}
+              
+          String query2 = ("UPDATE engine "
+                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", DISPLACEMENT =" + QUOTE + displacement + QUOTE + ", NUMOFCYLINDERS =" + QUOTE + numOfCylinders + QUOTE + ", HORSEPOWER =" + QUOTE + horsepower + QUOTE + ", TORQUE =" + QUOTE + torque + QUOTE 
+                  + "WHERE VIN =" + QUOTE + VIN + QUOTE );
+          System.out.println("update engine query= " + query2);
+          LOGGER.info("update engine query= " + query2);
+          try{
+          conn = DBConnection.getMyConnection();
+          Statement stmt2 = conn.createStatement();
+          result2 = stmt2.executeUpdate(query2);
+          }
+          catch (SQLException sql)
+              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+              return false;}
+          
+          String query3 = ("UPDATE transmission "
+                  + "SET VIN =" + QUOTE + newVIN + QUOTE + ", TYPE =" + QUOTE + transType + QUOTE + ", MODEL =" + QUOTE + transModel + QUOTE + ", NUMOFGEARS =" + QUOTE + numOfGears + QUOTE 
+                  + "WHERE VIN =" + QUOTE + VIN + QUOTE );
+          System.out.println("delete from transmission table query= " + query3);
+          LOGGER.info("delete from transmission table query= " + query3);
+          try{
+          conn = DBConnection.getMyConnection();
+          Statement stmt3= conn.createStatement();
+          result3 = stmt3.executeUpdate(query3);
+          }
+          catch (SQLException sql)
+              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+              return false;}
+         
+       
+          
+          if (result1 == 0 || result2==0 || result3==0)
+              return false;
+          else
+              return true;
+      }    
       
 }
