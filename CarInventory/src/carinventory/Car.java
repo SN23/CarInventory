@@ -1,7 +1,7 @@
 package carinventory;
 
 /**
- *
+ * Car domain class
  * @author Sukhjinder
  */
 public class Car {

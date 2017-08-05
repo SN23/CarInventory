@@ -6,7 +6,6 @@ package carinventory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,13 +13,12 @@ import java.util.logging.Logger;
 public class DBConnection {
     
     private static Connection conn=null;
-    private static String dbString = "jdbc:mysql://localhost:3306/carinventory";
-    private static String userName = "root";
-    private static String password = "root";
+    private static final String DBSTRING = "jdbc:mysql://localhost:3306/carinventory";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "root";
     
   public static void init() throws ClassNotFoundException{  
-        Class.forName("com.mysql.jdbc.Driver");
-             
+        Class.forName("com.mysql.jdbc.Driver");   
     }
     
     /**
@@ -31,7 +29,7 @@ public class DBConnection {
       
     public static Connection getMyConnection() throws SQLException{
         if (conn == null)
-          conn=DriverManager.getConnection(dbString,userName, password);  
+          conn=DriverManager.getConnection(DBSTRING,USERNAME, PASSWORD);  
         return conn;
     }
     

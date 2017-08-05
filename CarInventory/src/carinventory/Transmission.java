@@ -1,7 +1,7 @@
 package carinventory;
 
 /**
- *
+ * Transmission domain class
  * @author Sukhjinder
  */
 public class Transmission {

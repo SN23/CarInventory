@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
- *
+ * 
  * @author Sukhjinder
  */
 
@@ -125,6 +125,7 @@ public class DBAccess {
       }
     
       
+      
      /**
        * Inserts a transmission into the database
        * @param transmission transmission
@@ -158,6 +159,7 @@ public class DBAccess {
           else
               return true;
       }
+      
       
       
       /**
@@ -231,6 +233,8 @@ public class DBAccess {
          return null;}
          
       }
+      
+      
       
       /**
        * Builds a arrayList of cars
@@ -312,9 +316,7 @@ public class DBAccess {
       }
       
         
-        
-        
-        
+          
      /**
        * Searches for a car by VIN
        * If SQLException is caught, exception is logged
@@ -343,14 +345,13 @@ public class DBAccess {
              car = buildCar(rs);
           }
           stmt.close();}
-      catch (SQLException sql)
+                catch (SQLException sql)
               {LOGGER.log(Level.SEVERE,"SQLException occured", sql);}
           
           return car;
       }   
         
         
-    
         
     /**
        * Lists all the cars in the DB
@@ -379,7 +380,7 @@ public class DBAccess {
              cars = buildCars(rs);
           }
           stmt.close();}
-      catch (SQLException sql)
+            catch (SQLException sql)
               {LOGGER.log(Level.SEVERE,"SQLException occured", sql);}
           
           return cars;
@@ -448,5 +449,4 @@ public class DBAccess {
           else
               return true;
       }    
-      
 }
