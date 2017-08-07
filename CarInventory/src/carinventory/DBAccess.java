@@ -32,14 +32,10 @@ public class DBAccess {
             LOGGER.addHandler(fileHandler);
             SimpleFormatter simpleFormatter = new SimpleFormatter();
             fileHandler.setFormatter(simpleFormatter);
-            LOGGER.info("Logger Name: "+ LOGGER.getName());
+            LOGGER.log(Level.INFO, "Logger Name: {0}", LOGGER.getName());
         }
         
-        catch (IOException ex) {
-            Logger.getLogger(DBAccess.class.getName()).log(Level.SEVERE, null, ex);
-        } 
-        
-        catch (SecurityException ex) {
+        catch (IOException | SecurityException ex) {
             Logger.getLogger(DBAccess.class.getName()).log(Level.SEVERE, null, ex);
         }   
     }
@@ -68,7 +64,7 @@ public class DBAccess {
             
           String query=("insert into car (VIN, MAKE, MODEL, YEAR, COLOR, PRICE, WEIGHT, DRIVETRAIN, BODYSTYLE, MILEAGE, FUELTYPE) values (" + valueString + ")");
           System.out.println("addCar query is " + query);
-          LOGGER.info("addCar query is = " + query);
+          LOGGER.log(Level.INFO, "addCar query is = {0}", query);
                   
           try{
                 conn = DBConnection.getMyConnection();
@@ -81,10 +77,7 @@ public class DBAccess {
                 return false;
           }
           
-          if (result==0)
-             return false;
-          else
-              return true;
+        return result != 0;
       }
       
       
@@ -106,7 +99,7 @@ public class DBAccess {
             
           String query=("insert into engine (VIN, DISPLACEMENT, NUMOFCYLINDERS, ENGINE_MODEL, HORSEPOWER, TORQUE) values (" + valueString + ")");
           System.out.println("addEngine query is " + query);
-          LOGGER.info("addEngine query is = " + query);
+          LOGGER.log(Level.INFO, "addEngine query is = {0}", query);
                   
           try{
                 conn = DBConnection.getMyConnection();
@@ -118,10 +111,7 @@ public class DBAccess {
               return false;
           }
           
-          if (result==0)
-             return false;
-          else
-              return true;
+        return result != 0;
       }
     
       
@@ -141,7 +131,7 @@ public class DBAccess {
             
           String query=("insert into transmission (VIN, TYPE, TRANSMISSION_MODEL, NUMOFGEARS) values (" + valueString + ")");
           System.out.println("InsertDeck query is " + query);
-          LOGGER.info("InsertDeck query is = " + query);
+          LOGGER.log(Level.INFO, "InsertDeck query is = {0}", query);
                   
           try{
                 conn = DBConnection.getMyConnection();
@@ -154,10 +144,7 @@ public class DBAccess {
               return false;
           }
           
-          if (result==0)
-             return false;
-          else
-              return true;
+        return result != 0;
       }
       
       
@@ -228,9 +215,10 @@ public class DBAccess {
                 
                 return car;
          }
-         catch(SQLException sql)
-         {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
-         return null;}
+         catch(SQLException sql){
+             LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+             return null;
+         }
          
       }
       
@@ -271,48 +259,46 @@ public class DBAccess {
           
           String query1 = "delete from car where VIN= "+QUOTE+VIN+QUOTE;
           System.out.println("delete from car query= " + query1);
-          LOGGER.info("delete from cars table query= " + query1);
+          LOGGER.log(Level.INFO, "delete from cars table query= {0}", query1);
           try{
           conn = DBConnection.getMyConnection();
           Statement stmt = conn.createStatement();
           result1 = stmt.executeUpdate(query1);
           }
-          catch (SQLException sql)
-              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
-              return false;}
+          catch (SQLException sql){
+              LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+              return false;
+          }
               
 //        Deletes car engine
           String query2 = "delete from engine where VIN= "+QUOTE+VIN+QUOTE;
           System.out.println("delete from engine table query= " + query2);
-          LOGGER.info("delete from engine table query= " + query2);
+          LOGGER.log(Level.INFO, "delete from engine table query= {0}", query2);
           try{
           conn = DBConnection.getMyConnection();
           Statement stmt2 = conn.createStatement();
           result2 = stmt2.executeUpdate(query2);
           }
-          catch (SQLException sql)
-              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
-              return false;}
+          catch (SQLException sql){
+              LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+              return false;
+          }
           
 //        Deletes car transmission
           String query3 = "delete from transmission where VIN= "+QUOTE+VIN+QUOTE;
           System.out.println("delete from transmission table query= " + query3);
-          LOGGER.info("delete from transmission table query= " + query3);
+          LOGGER.log(Level.INFO, "delete from transmission table query= {0}", query3);
           try{
           conn = DBConnection.getMyConnection();
           Statement stmt3= conn.createStatement();
           result3 = stmt3.executeUpdate(query3);
           }
-          catch (SQLException sql)
-              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
-              return false;}
-         
-       
-          
-          if (result1 == 0 || result2==0 || result3==0)
+          catch (SQLException sql){
+              LOGGER.log(Level.SEVERE,"SQLException occured", sql);
               return false;
-          else
-              return true;
+          }
+        
+        return !(result1 == 0 || result2==0 || result3==0);
       }
       
         
@@ -334,19 +320,21 @@ public class DBAccess {
                   + "where car.VIN = "+QUOTE+ VIN + QUOTE);
           
           System.out.println("retrieveByVIN query= " + query);
-          LOGGER.info("retrieveByVIN query= " + query);
+          LOGGER.log(Level.INFO, "retrieveByVIN query= {0}", query);
           try{
           conn = DBConnection.getMyConnection();
-          Statement stmt = conn.createStatement();
-          ResultSet rs = stmt.executeQuery(query);
-          if (!rs.next())
-              car = null;   //no matching car found
-          else{
-             car = buildCar(rs);
+              try (Statement stmt = conn.createStatement()) {
+                  ResultSet rs = stmt.executeQuery(query);
+                  if (!rs.next())
+                      car = null;   //no matching car found
+                  else{
+                      car = buildCar(rs);
+                  }   
+              }
+}
+          catch (SQLException sql){
+            LOGGER.log(Level.SEVERE,"SQLException occured", sql);
           }
-          stmt.close();}
-                catch (SQLException sql)
-              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);}
           
           return car;
       }   
@@ -357,7 +345,6 @@ public class DBAccess {
        * Lists all the cars in the DB
        * If SQLException is caught, exception is logged
        * If NumberFormatException is caught, returns false
-       * @param VIN of car
        * @return ArrayList of cars
        */
         public static ArrayList<Car> retrieveCars() {
@@ -369,19 +356,23 @@ public class DBAccess {
                   + "join transmission on car.VIN = transmission.VIN ");
           
           System.out.println("retrieveCars query= " + query);
-          LOGGER.info("retrieveCars query= " + query);
+          LOGGER.log(Level.INFO, "retrieveCars query= {0}", query);
           try{
           conn = DBConnection.getMyConnection();
-          Statement stmt = conn.createStatement();
-          ResultSet rs = stmt.executeQuery(query);
-          if (!rs.next())
-              cars = null;   //no matching car found
-          else{
-             cars = buildCars(rs);
+              try (Statement stmt = conn.createStatement()) {
+                  ResultSet rs = stmt.executeQuery(query);
+                  if (!rs.next())
+                      cars = null;   //no matching car found
+                  else{
+                      cars = buildCars(rs);
+                  }   
+              }
+            
           }
-          stmt.close();}
-            catch (SQLException sql)
-              {LOGGER.log(Level.SEVERE,"SQLException occured", sql);}
+          
+          catch (SQLException sql){
+              LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+          }
           
           return cars;
       }    
@@ -393,6 +384,25 @@ public class DBAccess {
         * If no car is found will return false
         * If SQLException occurs, exception is logged (returns false)
         * @param VIN updates car based on VIN
+        * @param newVIN
+        * @param make
+        * @param model
+        * @param year
+        * @param color
+        * @param price
+        * @param weight
+        * @param drivetrain
+        * @param bodystyle
+        * @param mileage
+        * @param fuelType
+        * @param displacement
+        * @param numOfCylinders
+        * @param horsepower
+        * @param torque
+        * @param engineModel
+        * @param transType
+        * @param transModel
+        * @param numOfGears
         * @return updates car from specified tables in query
         */
         public static Boolean updateCar(String VIN, String newVIN, String make, String model, String year, String color, double price, String weight, String drivetrain, String bodystyle, String mileage, String fuelType, String displacement, String numOfCylinders, String horsepower, String torque, String engineModel, String transType, String transModel, String numOfGears)
@@ -404,7 +414,7 @@ public class DBAccess {
                   + "SET VIN =" + QUOTE + newVIN + QUOTE + ", MAKE =" + QUOTE + make + QUOTE + ", MODEL =" + QUOTE + model + QUOTE + ", YEAR =" + QUOTE + year + QUOTE + ", COLOR =" + QUOTE + color + QUOTE + ", PRICE =" +QUOTE+ price + QUOTE + ", WEIGHT =" + QUOTE + weight + QUOTE + ", DRIVETRAIN =" + QUOTE + drivetrain + QUOTE + ", BODYSTYLE =" + QUOTE + bodystyle + QUOTE + ", MILEAGE =" + QUOTE + mileage + QUOTE + ", FUELTYPE =" + QUOTE + fuelType + QUOTE 
                   + "WHERE VIN =" + QUOTE + VIN + QUOTE );
           System.out.println("update car query= " + query1);
-          LOGGER.info("update car query= " + query1);
+          LOGGER.log(Level.INFO, "update car query= {0}", query1);
           try{
           conn = DBConnection.getMyConnection();
           Statement stmt = conn.createStatement();
@@ -418,7 +428,7 @@ public class DBAccess {
                   + "SET VIN =" + QUOTE + newVIN + QUOTE + ", DISPLACEMENT =" + QUOTE + displacement + QUOTE + ", NUMOFCYLINDERS =" + QUOTE + numOfCylinders + QUOTE + ", ENGINE_MODEL=" + QUOTE + engineModel + QUOTE + ", HORSEPOWER =" + QUOTE + horsepower + QUOTE + ", TORQUE =" + QUOTE + torque + QUOTE 
                   + "WHERE VIN =" + QUOTE + VIN + QUOTE );
           System.out.println("update engine query= " + query2);
-          LOGGER.info("update engine query= " + query2);
+          LOGGER.log(Level.INFO, "update engine query= {0}", query2);
           try{
           conn = DBConnection.getMyConnection();
           Statement stmt2 = conn.createStatement();
@@ -432,7 +442,7 @@ public class DBAccess {
                   + "SET VIN =" + QUOTE + newVIN + QUOTE + ", TYPE =" + QUOTE + transType + QUOTE + ", TRANSMISSION_MODEL =" + QUOTE + transModel + QUOTE + ", NUMOFGEARS =" + QUOTE + numOfGears + QUOTE 
                   + "WHERE VIN =" + QUOTE + VIN + QUOTE );
           System.out.println("delete from transmission table query= " + query3);
-          LOGGER.info("delete from transmission table query= " + query3);
+          LOGGER.log(Level.INFO, "delete from transmission table query= {0}", query3);
           try{
           conn = DBConnection.getMyConnection();
           Statement stmt3= conn.createStatement();
@@ -441,12 +451,7 @@ public class DBAccess {
           catch (SQLException sql)
               {LOGGER.log(Level.SEVERE,"SQLException occured", sql);
               return false;}
-         
-       
-          
-          if (result1 == 0 || result2==0 || result3==0)
-              return false;
-          else
-              return true;
+        
+        return !(result1 == 0 || result2==0 || result3==0);
       }    
 }
