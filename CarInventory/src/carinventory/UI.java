@@ -1,6 +1,9 @@
 package carinventory;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  * UI for the application
@@ -8,7 +11,7 @@ import java.util.ArrayList;
  */
 public class UI extends javax.swing.JFrame {
 
-    ArrayList<Car> cars = new ArrayList<>();
+    ArrayList<Car> cars = new ArrayList<Car>();
 
 //  Car Properties  
     String vin;
@@ -41,12 +44,250 @@ public class UI extends javax.swing.JFrame {
        
     String vinUpdate;
         
-  
+//    final DefaultComboBoxModel Acura = new DefaultComboBoxModel(new String[]{"CL", "ILX", "Integra", "Legend", "MDX", "NSX", "RDX", "RL", "RLX", "RSX", "SLX", "TL", "TLX", "TSX", "Vigor", "ZDX"});
+//    final DefaultComboBoxModel Alfa_Romeo = new DefaultComboBoxModel(new String[]{"164", "4C", "4C Spider", "8C Competizione", "*c Spider", " Giulia", "Spider", "Stelvio"});
+//    final DefaultComboBoxModel Aston_Martin = new DefaultComboBoxModel(new String[]{"DB AR1 Zagato", "DB11", "DB7", "DB7 Vantage", "DB9", "DBS", "Rapide", "Rapide S", " V12 Vanquish", "V12 Vantage", " V12 Vantage S", "V8 Vantage", "V8 Vantage S", "Vanquish", "Vantage", "Vantage GT", "Virage"});
+//    final DefaultComboBoxModel Audi = new DefaultComboBoxModel(new String[]{"100", "200", "80", "90", "A3", "A3 e-tron", "A4", "A4 allroad", "A5", "A6", "A7", "A8", "allroad", "Cabriolet", "Q3", "Q5", "Q5 hybrid", "Q7", "quattro", "R8", "RS 3", "RS 4", "RS 5", "RS 6", "RS 7", "RS6", "S3", "S4", "S5", "S6", "S7", "S8", "SQ5", "TT", "TT RS", "TTS"});
+//    final DefaultComboBoxModel Bentley = new DefaultComboBoxModel(new String[]{"Arnage", "Azure", "Bentayga", "Brooklands", "Continental", "Continental Flying Spur", "Continental GT", "Continental GTC", "Continental Supersports", "Flying Spur", "Mulsanne", "R-Type", "Turbo R", "Turbo RL", "Turbo RT", "Turbo S"});
+//    final DefaultComboBoxModel BMW = new DefaultComboBoxModel(new String[]{"1 Series M", "128", "135", "228", "230", "M235", "M240", "318", "320", "323", "325", "328", "328 Gran Turismo", "328d", "330", "330 Gran Turismo", "330e", "335", "335 Gran Turismo", "340", "340", "340 Gran Turismo", "ActiveHybrid 3", "M3", "428", "428 Gran Coupe", "430", "430 Gran Coupe", "435", "435 Gran Coupe", "440", "440 Gran Coupe", "M4", "525", "528", "530", "530e","535", "535 Gran Turismo", "535d", "540", "545", "550", "550 Gran Turismo", "Active Hybrid 5", "M5", "640", "640 Gran Coupe", "640 Gran Turismo", "645", "650", "650 Gran Coupe", "ALPINA B6 Gran Coupe", "M6", "M6 Gran Coupe", "735", "740", "740e", "745", "750", "760", "ActiveHybrid 7", "ActiveHybrid 740", "ActiveHybrid 750", "ALPINA B7", "840", "850", "i3", "i8", "1 Series M", "M", "M2", "M235", "M240", "M3", "M4", "M5", "M550", "M760", "X5 M", "X6 M", "Z4 M", "ActiveHybrid X6", "X1", "X3", "X4", "X5", "X5 eDrive", "X6", "Z3", "Z4", "Z8"});
+//    final DefaultComboBoxModel Buick = new DefaultComboBoxModel(new String[]{"Cascada", "Century", "Enclave", "Encore", "Envision", "LaCrosse", "LeSabre", "Lucerne", "Park Avenue", "Rainier", "Reatta", "Regal", "Regal Sportback", "Regal TourX", "Rendezvous", "Riviera", "Roadmaster", "Skylark", "Terraza", "Verano"});
+//    final DefaultComboBoxModel Cadillac = new DefaultComboBoxModel(new String[]{"Allante", "ATS", "ATS-V", "Brougham", "Catera", "CT6", "CT6 PLUG-IN", "CTS", "CTS-V", "DeVille", "DTS","Eldorado", "ELR", "Escalade", "Escalade ESV", "Escalade EXT", "Escalade Hybrid", "Fleetwoord", "Seville", "Sixty Special", "SRX", "STS", "XLR", "XT5", "XTS"});
+//    final DefaultComboBoxModel Chevrolet = new DefaultComboBoxModel(new String[]{"1500", "2500", "3500", "Astro", "Avalanche", "Aveo", "Beretta", "Blazer", "Bolt EV", "Camaro", "Caprice", "Caprice Classic", "Captiva Sport", "Cavalier", "City Express", "Classic", "Cobalt", "Colorado", "Corsica", "Corvette", "Corvette Stringray", "Cruze", "Cruze Limited", "Equinox", "Express 1500", "Express 2500", "Express 3500", "HHR", " Impala", "Impala Limited", "Lumina", "Lumina APV", "Malibu", "Malibu Classic", "Malibu Hybrid", "Malibu Limited", "Malibu Maxx", "Metro", "Monte Carlo", "Pickup", "Prizm", "S-10", "S-10 Blazer", "Silverado 1500", "Silverado 1500 Hybrid", "Silverado 2500", "Silverado 3500", "Sonic", "Spark", "Spark EV", "Sportvan", "SS", "SSR", "Suburban", "Tahoe", "Tahoe Hybrid", "Tracker", "TrailBlazer", "TrailBlazer EXt", "Traverse", "Trax", "Uplander", "Venture", "Volt",});
+//    final DefaultComboBoxModel Chrysler = new DefaultComboBoxModel(new String[]{"200", "300", "300C", "300M", "Apsen", "Aspen Hybrid", "Cirrus", "Concorde", "Crossfire", "Grand Voyager", "Imperial", "LeBaron", "LHS", "New Yorker", "Pacifica", "Pacifica Hybrid", "Prowler", "PT Cruiser", "Sebring", "TC by Maserati", "Town & Country", "Voyager"});
+//    final DefaultComboBoxModel Dodge = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Ferrari = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Fiat = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Ford = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Genesis = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel GMC = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Honda = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Hyundai = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Infiniti = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Jaguar = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Jeep = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Kia = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Lamborghini = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Land_Rover = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Lexus = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Lincoln = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel Maserati = new DefaultComboBoxModel(new String[]{"Coupe", "Ghibli", "GranSport", "Gran Sport Spyder", "Gran Turismo", "Levante", "Quattroporte", "Spyder",});
+//    final DefaultComboBoxModel Mazda = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
+//    final DefaultComboBoxModel McLaren = new DefaultComboBoxModel(new String[]{"570GT", "570S", "650S", "675LT", "MP4-12C", "P1", "F1"});
+//    final DefaultComboBoxModel Mercedes_Benz = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Mercury = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel MINI = new DefaultComboBoxModel(new String[]{"Clubman", "Cooper Clubman", "Cooper S Clubman", "Cooper", "Cooper S", "Countryman", "Cooper Countryman", "Cooper S Countryman", "Paceman", "Roadster"});
+//    final DefaultComboBoxModel Mitsubishi = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Nissan = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Pontiac = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Porsche = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel RAM = new DefaultComboBoxModel(new String[]{"1500", "2500", "3500", "Cargo", "ProMaster 1500", "ProMaster 2500", "Promaster 2500 Window Van", "ProMaster 3500", "ProMaster 3500 Window Van", "ProMaster City",});
+//    final DefaultComboBoxModel Rolls_Royce = new DefaultComboBoxModel(new String[]{"40/50 HP Silver Ghost", "Corniche", "Dawn", "Ghost", "Park Ward", "Phantom", "Phantom Coupe", "Phantom Drophead Coupe", "Phantom Vi", "Silver Dawn", "Silver Seraph", "Silver Spur", "Silver Spur II", "Wraith"});
+//    final DefaultComboBoxModel Saturn = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Scion = new DefaultComboBoxModel(new String[]{"FR-S", "iA", "iM", "iQ", "tC", "xA", "xB", "xD",});
+//    final DefaultComboBoxModel Smart = new DefaultComboBoxModel(new String[]{"ForTwo", "ForTwo Electric Drive"});
+//    final DefaultComboBoxModel Subaru = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Tesla = new DefaultComboBoxModel(new String[]{"Model S", "Model X", "Model 3", "Roadster",});
+//    final DefaultComboBoxModel Toyota = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Volkswagen = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+//    final DefaultComboBoxModel Volvo = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
+    
     /**
      * Creates new form UI
      */
     public UI() {
         initComponents();
+        
+             makeComboBox.addActionListener((new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+                String selectedModel = (String) makeComboBox.getSelectedItem();
+                
+                if("Acura".equals(selectedModel)){ 
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("acura").toArray()));
+                }
+                
+                if("Alfa Romeo".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("alfa romeo").toArray()));
+                }
+                
+                if("Aston Martin".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("aston martin").toArray()));
+                }
+                
+                if("Audi".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("audi").toArray()));
+                }
+                
+                if("Bentley".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("bentley").toArray()));
+                }
+                
+                if("BMW".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("bmw").toArray()));
+                }
+                
+                if("Buick".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("buick").toArray()));
+                }
+                
+                if("Cadillac".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("cadillac").toArray()));
+                }
+                
+                if("Chevrolet".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("chevrolet").toArray()));
+                }
+                
+                if("Chrysler".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("chrysler").toArray()));
+                }
+                
+                if("Dodge".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("dodge").toArray()));
+                }
+                
+                if("Ferrari".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("ferrari").toArray()));
+                }
+                
+                if("Fiat".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("fiat").toArray()));
+                }
+                
+                if("Ford".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("ford").toArray()));
+                }
+                
+                if("Genesis".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("genesis").toArray()));
+                }
+                
+                if("GMC".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("gmc").toArray()));
+                }
+                
+                if("Honda".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("honda").toArray()));
+                }
+                
+                if("Hyundai".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("hyundai").toArray()));
+                }
+                
+                if("Infiniti".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("infiniti").toArray()));
+                }
+                
+                if("Jaguar".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("jaguar").toArray()));
+                }
+                
+                if("Jeep".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("jeep").toArray()));
+                }
+                
+                if("Kia".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("kia").toArray()));
+                }
+                
+                if("Lamborghini".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("lamborghini").toArray()));
+                }
+                
+                if("Land Rover".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("land rover").toArray()));
+                }
+                
+                if("Lexus".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("lexus").toArray()));
+                }
+                
+                if("Lincoln".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("lincoln").toArray()));
+                }
+                
+                if("Maserati".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("maserati").toArray()));
+                }
+                
+                if("Mazda".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mazda").toArray()));
+                }
+                
+                if("McLaren".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mclaren").toArray()));
+                }
+                
+                if("Mercedes-Benz".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mercedes-benz").toArray()));
+                }
+                
+                if("Mercury".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mercury").toArray()));
+                }
+                
+                if("MINI".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mini").toArray()));
+                }
+                
+                if("Mitsubishi".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mitsubishi").toArray()));
+                }
+                
+                if("Nissan".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("nissan").toArray()));
+                }
+                
+                if("Pontiac".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("pontiac").toArray()));
+                }
+                
+                if("Porsche".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("porsche").toArray()));
+                }
+                
+                if("RAM".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("ram").toArray()));
+                }
+                
+                if("Rolls-Royce".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("rolls royce").toArray()));
+                }
+                
+                if("Saturn".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("saturn").toArray()));
+                }
+                
+                if("Scion".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("scion").toArray()));
+                }
+                
+                if("Smart".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("smart").toArray()));
+                }
+                
+                if("Subaru".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("subaru").toArray()));
+                }
+                
+                if("Tesla".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("tesla").toArray()));
+                }
+                
+                if("Toyota".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("toyota").toArray()));
+                }
+                
+                if("Volkswagen".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("volkswagen").toArray()));
+                }
+                
+                if("Volvo".equals(selectedModel)){
+                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("volvo").toArray()));
+                }
+            }
+        }));
     }
 
     /**
@@ -84,7 +325,6 @@ public class UI extends javax.swing.JFrame {
         numOfGearsLabel = new javax.swing.JLabel();
         addCarButton = new javax.swing.JButton();
         vinTextField = new javax.swing.JTextField();
-        modelTextField = new javax.swing.JTextField();
         yearTextField = new javax.swing.JTextField();
         colorTextField = new javax.swing.JTextField();
         priceTextField = new javax.swing.JTextField();
@@ -102,6 +342,7 @@ public class UI extends javax.swing.JFrame {
         transTypeComboBox = new javax.swing.JComboBox<>();
         numOfGearsComboBox = new javax.swing.JComboBox<>();
         makeComboBox = new javax.swing.JComboBox<>();
+        modelComboBox = new javax.swing.JComboBox<>();
         deleteCarPanel = new javax.swing.JPanel();
         enterVINLabel = new javax.swing.JLabel();
         vinDeleteCarTextField = new javax.swing.JTextField();
@@ -245,6 +486,12 @@ public class UI extends javax.swing.JFrame {
         numOfGearsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
         makeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari", "Fiat", "Ford", "Genesis", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "Mercury", "MINI", "Mitsubishi", "Nissan", "Pontiac", "Porsche", "RAM", "Rolls-Royce", "Saturn", "Scion", "Smart", "Subaru", "Tesla", "Toyota", "Volkswagen", "Volvo" }));
+        makeComboBox.setSelectedIndex(-1);
+        makeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                makeComboBoxActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout addCarPanelLayout = new javax.swing.GroupLayout(addCarPanel);
         addCarPanel.setLayout(addCarPanelLayout);
@@ -276,16 +523,16 @@ public class UI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(vinTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(modelTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(yearTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(colorTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(priceTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(weightTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(makeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, 170, Short.MAX_VALUE)
+                    .addComponent(makeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, 184, Short.MAX_VALUE)
                     .addComponent(bodyStyleComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mileageTextField)
                     .addComponent(fuelTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(driveTrainComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(driveTrainComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(modelComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
@@ -312,7 +559,7 @@ public class UI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(numOfGearsLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -343,7 +590,7 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carLabel)
                     .addComponent(engineLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vinLabel)
                     .addComponent(displacementLabel)
@@ -359,8 +606,8 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(modelLabel)
                     .addComponent(engineModelLabel)
-                    .addComponent(modelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(engineModelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(engineModelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modelComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(yearLabel)
@@ -862,7 +1109,7 @@ public class UI extends javax.swing.JFrame {
         
         vin = vinTextField.getText();
         make = makeComboBox.getSelectedItem().toString();
-        model = modelTextField.getText();
+        model = modelComboBox.getSelectedItem().toString();
         year = yearTextField.getText();
         color = colorTextField.getText();
         price = Double.parseDouble(priceTextField.getText());
@@ -1031,10 +1278,13 @@ public class UI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_yearUpdateTextFieldActionPerformed
 
+    private void makeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makeComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_makeComboBoxActionPerformed
+
     public void clearFields(){
         
         vinTextField.setText("");
-        modelTextField.setText("");
         yearTextField.setText("");
         colorTextField.setText("");
         priceTextField.setText("");
@@ -1138,9 +1388,9 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel mileageLabel1;
     private javax.swing.JTextField mileageTextField;
     private javax.swing.JTextField mileageUpdateTextField;
+    private javax.swing.JComboBox<String> modelComboBox;
     private javax.swing.JLabel modelLabel;
     private javax.swing.JLabel modelLabel1;
-    private javax.swing.JTextField modelTextField;
     private javax.swing.JTextField modelUpdateTextField;
     private javax.swing.JComboBox<String> numOfCylindersComboBox;
     private javax.swing.JLabel numOfCylindersLabel;

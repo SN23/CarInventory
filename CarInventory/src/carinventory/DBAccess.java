@@ -331,7 +331,7 @@ public class DBAccess {
                       car = buildCar(rs);
                   }   
               }
-}
+            }
           catch (SQLException sql){
             LOGGER.log(Level.SEVERE,"SQLException occured", sql);
           }

@@ -87,16 +87,16 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="vinTextField" alignment="1" max="32767" attributes="0"/>
-                          <Component id="modelTextField" alignment="1" max="32767" attributes="0"/>
                           <Component id="yearTextField" alignment="1" max="32767" attributes="0"/>
                           <Component id="colorTextField" alignment="1" max="32767" attributes="0"/>
                           <Component id="priceTextField" alignment="1" max="32767" attributes="0"/>
                           <Component id="weightTextField" alignment="1" max="32767" attributes="0"/>
-                          <Component id="makeComboBox" alignment="1" pref="170" max="32767" attributes="0"/>
+                          <Component id="makeComboBox" alignment="1" pref="184" max="32767" attributes="0"/>
                           <Component id="bodyStyleComboBox" alignment="0" max="32767" attributes="0"/>
                           <Component id="mileageTextField" alignment="0" max="32767" attributes="0"/>
                           <Component id="fuelTypeComboBox" alignment="0" max="32767" attributes="0"/>
                           <Component id="driveTrainComboBox" alignment="0" max="32767" attributes="0"/>
+                          <Component id="modelComboBox" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -132,7 +132,7 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       <Component id="numOfGearsLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                                      <EmptySpace pref="44" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="addCarButton" min="-2" pref="151" max="-2" attributes="0"/>
                                           <Component id="numOfGearsComboBox" min="-2" pref="175" max="-2" attributes="0"/>
@@ -177,7 +177,7 @@
                           <Component id="carLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="engineLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <EmptySpace pref="111" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="vinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="displacementLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -195,8 +195,8 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="modelLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="engineModelLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="modelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="engineModelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="modelComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -406,8 +406,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="vinTextField">
             </Component>
-            <Component class="javax.swing.JTextField" name="modelTextField">
-            </Component>
             <Component class="javax.swing.JTextField" name="yearTextField">
             </Component>
             <Component class="javax.swing.JTextField" name="colorTextField">
@@ -596,6 +594,20 @@
                     <StringItem index="44" value="Volkswagen"/>
                     <StringItem index="45" value="Volvo"/>
                   </StringArray>
+                </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="makeComboBoxActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="modelComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
                 </Property>
               </Properties>
               <AuxValues>
