@@ -11,7 +11,7 @@ import javax.swing.DefaultComboBoxModel;
  */
 public class UI extends javax.swing.JFrame {
 
-    ArrayList<Car> cars = new ArrayList<Car>();
+    ArrayList<Car> cars = new ArrayList<>();
 
 //  Car Properties  
     String vin;
@@ -44,248 +44,24 @@ public class UI extends javax.swing.JFrame {
        
     String vinUpdate;
         
-//    final DefaultComboBoxModel Acura = new DefaultComboBoxModel(new String[]{"CL", "ILX", "Integra", "Legend", "MDX", "NSX", "RDX", "RL", "RLX", "RSX", "SLX", "TL", "TLX", "TSX", "Vigor", "ZDX"});
-//    final DefaultComboBoxModel Alfa_Romeo = new DefaultComboBoxModel(new String[]{"164", "4C", "4C Spider", "8C Competizione", "*c Spider", " Giulia", "Spider", "Stelvio"});
-//    final DefaultComboBoxModel Aston_Martin = new DefaultComboBoxModel(new String[]{"DB AR1 Zagato", "DB11", "DB7", "DB7 Vantage", "DB9", "DBS", "Rapide", "Rapide S", " V12 Vanquish", "V12 Vantage", " V12 Vantage S", "V8 Vantage", "V8 Vantage S", "Vanquish", "Vantage", "Vantage GT", "Virage"});
-//    final DefaultComboBoxModel Audi = new DefaultComboBoxModel(new String[]{"100", "200", "80", "90", "A3", "A3 e-tron", "A4", "A4 allroad", "A5", "A6", "A7", "A8", "allroad", "Cabriolet", "Q3", "Q5", "Q5 hybrid", "Q7", "quattro", "R8", "RS 3", "RS 4", "RS 5", "RS 6", "RS 7", "RS6", "S3", "S4", "S5", "S6", "S7", "S8", "SQ5", "TT", "TT RS", "TTS"});
-//    final DefaultComboBoxModel Bentley = new DefaultComboBoxModel(new String[]{"Arnage", "Azure", "Bentayga", "Brooklands", "Continental", "Continental Flying Spur", "Continental GT", "Continental GTC", "Continental Supersports", "Flying Spur", "Mulsanne", "R-Type", "Turbo R", "Turbo RL", "Turbo RT", "Turbo S"});
-//    final DefaultComboBoxModel BMW = new DefaultComboBoxModel(new String[]{"1 Series M", "128", "135", "228", "230", "M235", "M240", "318", "320", "323", "325", "328", "328 Gran Turismo", "328d", "330", "330 Gran Turismo", "330e", "335", "335 Gran Turismo", "340", "340", "340 Gran Turismo", "ActiveHybrid 3", "M3", "428", "428 Gran Coupe", "430", "430 Gran Coupe", "435", "435 Gran Coupe", "440", "440 Gran Coupe", "M4", "525", "528", "530", "530e","535", "535 Gran Turismo", "535d", "540", "545", "550", "550 Gran Turismo", "Active Hybrid 5", "M5", "640", "640 Gran Coupe", "640 Gran Turismo", "645", "650", "650 Gran Coupe", "ALPINA B6 Gran Coupe", "M6", "M6 Gran Coupe", "735", "740", "740e", "745", "750", "760", "ActiveHybrid 7", "ActiveHybrid 740", "ActiveHybrid 750", "ALPINA B7", "840", "850", "i3", "i8", "1 Series M", "M", "M2", "M235", "M240", "M3", "M4", "M5", "M550", "M760", "X5 M", "X6 M", "Z4 M", "ActiveHybrid X6", "X1", "X3", "X4", "X5", "X5 eDrive", "X6", "Z3", "Z4", "Z8"});
-//    final DefaultComboBoxModel Buick = new DefaultComboBoxModel(new String[]{"Cascada", "Century", "Enclave", "Encore", "Envision", "LaCrosse", "LeSabre", "Lucerne", "Park Avenue", "Rainier", "Reatta", "Regal", "Regal Sportback", "Regal TourX", "Rendezvous", "Riviera", "Roadmaster", "Skylark", "Terraza", "Verano"});
-//    final DefaultComboBoxModel Cadillac = new DefaultComboBoxModel(new String[]{"Allante", "ATS", "ATS-V", "Brougham", "Catera", "CT6", "CT6 PLUG-IN", "CTS", "CTS-V", "DeVille", "DTS","Eldorado", "ELR", "Escalade", "Escalade ESV", "Escalade EXT", "Escalade Hybrid", "Fleetwoord", "Seville", "Sixty Special", "SRX", "STS", "XLR", "XT5", "XTS"});
-//    final DefaultComboBoxModel Chevrolet = new DefaultComboBoxModel(new String[]{"1500", "2500", "3500", "Astro", "Avalanche", "Aveo", "Beretta", "Blazer", "Bolt EV", "Camaro", "Caprice", "Caprice Classic", "Captiva Sport", "Cavalier", "City Express", "Classic", "Cobalt", "Colorado", "Corsica", "Corvette", "Corvette Stringray", "Cruze", "Cruze Limited", "Equinox", "Express 1500", "Express 2500", "Express 3500", "HHR", " Impala", "Impala Limited", "Lumina", "Lumina APV", "Malibu", "Malibu Classic", "Malibu Hybrid", "Malibu Limited", "Malibu Maxx", "Metro", "Monte Carlo", "Pickup", "Prizm", "S-10", "S-10 Blazer", "Silverado 1500", "Silverado 1500 Hybrid", "Silverado 2500", "Silverado 3500", "Sonic", "Spark", "Spark EV", "Sportvan", "SS", "SSR", "Suburban", "Tahoe", "Tahoe Hybrid", "Tracker", "TrailBlazer", "TrailBlazer EXt", "Traverse", "Trax", "Uplander", "Venture", "Volt",});
-//    final DefaultComboBoxModel Chrysler = new DefaultComboBoxModel(new String[]{"200", "300", "300C", "300M", "Apsen", "Aspen Hybrid", "Cirrus", "Concorde", "Crossfire", "Grand Voyager", "Imperial", "LeBaron", "LHS", "New Yorker", "Pacifica", "Pacifica Hybrid", "Prowler", "PT Cruiser", "Sebring", "TC by Maserati", "Town & Country", "Voyager"});
-//    final DefaultComboBoxModel Dodge = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Ferrari = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Fiat = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Ford = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Genesis = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel GMC = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Honda = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Hyundai = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Infiniti = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Jaguar = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Jeep = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Kia = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Lamborghini = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Land_Rover = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Lexus = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Lincoln = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel Maserati = new DefaultComboBoxModel(new String[]{"Coupe", "Ghibli", "GranSport", "Gran Sport Spyder", "Gran Turismo", "Levante", "Quattroporte", "Spyder",});
-//    final DefaultComboBoxModel Mazda = new DefaultComboBoxModel(new String[]{"TL", "TSX", "MDX"});
-//    final DefaultComboBoxModel McLaren = new DefaultComboBoxModel(new String[]{"570GT", "570S", "650S", "675LT", "MP4-12C", "P1", "F1"});
-//    final DefaultComboBoxModel Mercedes_Benz = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Mercury = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel MINI = new DefaultComboBoxModel(new String[]{"Clubman", "Cooper Clubman", "Cooper S Clubman", "Cooper", "Cooper S", "Countryman", "Cooper Countryman", "Cooper S Countryman", "Paceman", "Roadster"});
-//    final DefaultComboBoxModel Mitsubishi = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Nissan = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Pontiac = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Porsche = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel RAM = new DefaultComboBoxModel(new String[]{"1500", "2500", "3500", "Cargo", "ProMaster 1500", "ProMaster 2500", "Promaster 2500 Window Van", "ProMaster 3500", "ProMaster 3500 Window Van", "ProMaster City",});
-//    final DefaultComboBoxModel Rolls_Royce = new DefaultComboBoxModel(new String[]{"40/50 HP Silver Ghost", "Corniche", "Dawn", "Ghost", "Park Ward", "Phantom", "Phantom Coupe", "Phantom Drophead Coupe", "Phantom Vi", "Silver Dawn", "Silver Seraph", "Silver Spur", "Silver Spur II", "Wraith"});
-//    final DefaultComboBoxModel Saturn = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Scion = new DefaultComboBoxModel(new String[]{"FR-S", "iA", "iM", "iQ", "tC", "xA", "xB", "xD",});
-//    final DefaultComboBoxModel Smart = new DefaultComboBoxModel(new String[]{"ForTwo", "ForTwo Electric Drive"});
-//    final DefaultComboBoxModel Subaru = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Tesla = new DefaultComboBoxModel(new String[]{"Model S", "Model X", "Model 3", "Roadster",});
-//    final DefaultComboBoxModel Toyota = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Volkswagen = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
-//    final DefaultComboBoxModel Volvo = new DefaultComboBoxModel(new String[]{"Skyline", "300zx", "350Z"});
     
     /**
      * Creates new form UI
      */
     public UI() {
         initComponents();
-        
-             makeComboBox.addActionListener((new ActionListener() {
+       
+            ArrayList<String> carMakes = Edmunds_API.getMakes();
+            final DefaultComboBoxModel makes = new DefaultComboBoxModel(carMakes.toArray());
+            makeComboBox.setModel(makes);
+            makeComboBox.setSelectedIndex(-1);
+
+            makeComboBox.addActionListener((new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+     
                 String selectedModel = (String) makeComboBox.getSelectedItem();
-                
-                if("Acura".equals(selectedModel)){ 
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("acura").toArray()));
-                }
-                
-                if("Alfa Romeo".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("alfa romeo").toArray()));
-                }
-                
-                if("Aston Martin".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("aston martin").toArray()));
-                }
-                
-                if("Audi".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("audi").toArray()));
-                }
-                
-                if("Bentley".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("bentley").toArray()));
-                }
-                
-                if("BMW".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("bmw").toArray()));
-                }
-                
-                if("Buick".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("buick").toArray()));
-                }
-                
-                if("Cadillac".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("cadillac").toArray()));
-                }
-                
-                if("Chevrolet".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("chevrolet").toArray()));
-                }
-                
-                if("Chrysler".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("chrysler").toArray()));
-                }
-                
-                if("Dodge".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("dodge").toArray()));
-                }
-                
-                if("Ferrari".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("ferrari").toArray()));
-                }
-                
-                if("Fiat".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("fiat").toArray()));
-                }
-                
-                if("Ford".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("ford").toArray()));
-                }
-                
-                if("Genesis".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("genesis").toArray()));
-                }
-                
-                if("GMC".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("gmc").toArray()));
-                }
-                
-                if("Honda".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("honda").toArray()));
-                }
-                
-                if("Hyundai".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("hyundai").toArray()));
-                }
-                
-                if("Infiniti".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("infiniti").toArray()));
-                }
-                
-                if("Jaguar".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("jaguar").toArray()));
-                }
-                
-                if("Jeep".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("jeep").toArray()));
-                }
-                
-                if("Kia".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("kia").toArray()));
-                }
-                
-                if("Lamborghini".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("lamborghini").toArray()));
-                }
-                
-                if("Land Rover".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("land rover").toArray()));
-                }
-                
-                if("Lexus".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("lexus").toArray()));
-                }
-                
-                if("Lincoln".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("lincoln").toArray()));
-                }
-                
-                if("Maserati".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("maserati").toArray()));
-                }
-                
-                if("Mazda".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mazda").toArray()));
-                }
-                
-                if("McLaren".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mclaren").toArray()));
-                }
-                
-                if("Mercedes-Benz".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mercedes-benz").toArray()));
-                }
-                
-                if("Mercury".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mercury").toArray()));
-                }
-                
-                if("MINI".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mini").toArray()));
-                }
-                
-                if("Mitsubishi".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("mitsubishi").toArray()));
-                }
-                
-                if("Nissan".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("nissan").toArray()));
-                }
-                
-                if("Pontiac".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("pontiac").toArray()));
-                }
-                
-                if("Porsche".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("porsche").toArray()));
-                }
-                
-                if("RAM".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("ram").toArray()));
-                }
-                
-                if("Rolls-Royce".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("rolls royce").toArray()));
-                }
-                
-                if("Saturn".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("saturn").toArray()));
-                }
-                
-                if("Scion".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("scion").toArray()));
-                }
-                
-                if("Smart".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("smart").toArray()));
-                }
-                
-                if("Subaru".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("subaru").toArray()));
-                }
-                
-                if("Tesla".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("tesla").toArray()));
-                }
-                
-                if("Toyota".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("toyota").toArray()));
-                }
-                
-                if("Volkswagen".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("volkswagen").toArray()));
-                }
-                
-                if("Volvo".equals(selectedModel)){
-                    modelComboBox.setModel(new DefaultComboBoxModel(NHTSA_API.getModels("volvo").toArray()));
-                }
+                modelComboBox.setModel(new DefaultComboBoxModel(Edmunds_API.getModels(selectedModel).toArray()));
             }
         }));
     }
@@ -343,6 +119,7 @@ public class UI extends javax.swing.JFrame {
         numOfGearsComboBox = new javax.swing.JComboBox<>();
         makeComboBox = new javax.swing.JComboBox<>();
         modelComboBox = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
         deleteCarPanel = new javax.swing.JPanel();
         enterVINLabel = new javax.swing.JLabel();
         vinDeleteCarTextField = new javax.swing.JTextField();
@@ -493,6 +270,8 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carinventory/logo.png"))); // NOI18N
+
         javax.swing.GroupLayout addCarPanelLayout = new javax.swing.GroupLayout(addCarPanel);
         addCarPanel.setLayout(addCarPanelLayout);
         addCarPanelLayout.setHorizontalGroup(
@@ -500,7 +279,7 @@ public class UI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addComponent(carLabel)
-                .addGap(123, 467, Short.MAX_VALUE))
+                .addGap(123, 538, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addCarPanelLayout.createSequentialGroup()
@@ -522,20 +301,22 @@ public class UI extends javax.swing.JFrame {
                             .addComponent(fuelTypeLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(vinTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(yearTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(colorTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(priceTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(weightTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(makeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, 184, Short.MAX_VALUE)
-                    .addComponent(bodyStyleComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(mileageTextField)
-                    .addComponent(fuelTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(driveTrainComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modelComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(mileageTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(bodyStyleComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(driveTrainComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(weightTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(priceTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(colorTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(yearTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(modelComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(makeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 215, Short.MAX_VALUE)
+                        .addComponent(vinTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(fuelTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel3))
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                    .addGroup(addCarPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -548,40 +329,39 @@ public class UI extends javax.swing.JFrame {
                                 .addGap(214, 214, 214))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
                                 .addComponent(transmissionLabel)
-                                .addGap(71, 71, 71))))
-                    .addGroup(addCarPanelLayout.createSequentialGroup()
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(transTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(transModelTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(numOfGearsLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(71, 71, 71))
                             .addGroup(addCarPanelLayout.createSequentialGroup()
                                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(addCarPanelLayout.createSequentialGroup()
-                                        .addGap(24, 24, 24)
-                                        .addComponent(numOfCylindersLabel))
+                                    .addComponent(transTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(transModelTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(displacementLabel)
-                                        .addGap(10, 10, 10)))
-                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(numOfGearsLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(addCarPanelLayout.createSequentialGroup()
-                                        .addComponent(engineLabel)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(displacementTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(engineModelTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(horsepowerTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(torqueTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(numOfCylindersComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap())))
+                                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(addCarPanelLayout.createSequentialGroup()
+                                                .addGap(24, 24, 24)
+                                                .addComponent(numOfCylindersLabel))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(displacementLabel)
+                                                .addGap(10, 10, 10)))
+                                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(addCarPanelLayout.createSequentialGroup()
+                                                .addComponent(engineLabel)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addComponent(displacementTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(engineModelTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(horsepowerTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(torqueTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(numOfCylindersComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))))
         );
         addCarPanelLayout.setVerticalGroup(
             addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -590,7 +370,7 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carLabel)
                     .addComponent(engineLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addGap(47, 47, 47)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vinLabel)
                     .addComponent(displacementLabel)
@@ -624,47 +404,53 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(priceLabel)
                     .addComponent(priceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addCarPanelLayout.createSequentialGroup()
-                        .addComponent(transmissionLabel)
-                        .addGap(18, 18, 18)
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(typeLabel)
-                            .addComponent(transTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(addCarPanelLayout.createSequentialGroup()
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(weightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(weightLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(drivetrainLabel)
-                            .addComponent(driveTrainComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addCarPanelLayout.createSequentialGroup()
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(transModelLabel)
-                            .addComponent(transModelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numOfGearsLabel)
-                            .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(addCarPanelLayout.createSequentialGroup()
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bodystyleLabel)
-                            .addComponent(bodyStyleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(addCarPanelLayout.createSequentialGroup()
+                                .addComponent(transmissionLabel)
+                                .addGap(18, 18, 18)
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(typeLabel)
+                                    .addComponent(transTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(addCarPanelLayout.createSequentialGroup()
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(weightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(weightLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(drivetrainLabel)
+                                    .addComponent(driveTrainComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(bodyStyleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bodystyleLabel))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(mileageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(mileageLabel))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fuelTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fuelTypeLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                        .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addCarPanelLayout.createSequentialGroup()
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(transModelLabel)
+                                    .addComponent(transModelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(numOfGearsLabel)
+                                    .addComponent(numOfGearsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(addCarPanelLayout.createSequentialGroup()
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(mileageLabel)
+                                    .addComponent(mileageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(addCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(fuelTypeLabel)
+                                    .addComponent(fuelTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel3)
+                        .addContainerGap(15, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCarPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(addCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28))))
         );
 
         updateTabbedPane.addTab("Add Car", addCarPanel);
@@ -708,7 +494,7 @@ public class UI extends javax.swing.JFrame {
                         .addComponent(vinDeleteCarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(searchButton)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         deleteCarPanelLayout.setVerticalGroup(
             deleteCarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -719,7 +505,7 @@ public class UI extends javax.swing.JFrame {
                     .addComponent(vinDeleteCarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchButton))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
+                .addComponent(jScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(removeCarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1025,7 +811,7 @@ public class UI extends javax.swing.JFrame {
                 .addComponent(vinUpdateTabTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchUpdateTabButton)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1040,12 +826,12 @@ public class UI extends javax.swing.JFrame {
                     .addComponent(vinUpdateTabTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(searchUpdateTabButton))
-                .addContainerGap(521, Short.MAX_VALUE))
+                .addContainerGap(486, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 56, Short.MAX_VALUE)
+                    .addGap(0, 68, Short.MAX_VALUE)
                     .addComponent(addCarPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 56, Short.MAX_VALUE)))
+                    .addGap(0, 67, Short.MAX_VALUE)))
         );
 
         updateTabbedPane.addTab("Update", jPanel1);
@@ -1071,7 +857,7 @@ public class UI extends javax.swing.JFrame {
                 .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, listInventoryPanelLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(93, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -1081,7 +867,7 @@ public class UI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
                 .addGap(20, 20, 20))
         );
 
@@ -1098,7 +884,7 @@ public class UI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(updateTabbedPane)
+                .addComponent(updateTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1375,6 +1161,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JTextField horsepowerUpdateTextField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JScrollPane jScrollPane1;
