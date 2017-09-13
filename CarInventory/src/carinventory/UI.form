@@ -273,7 +273,7 @@
                           <Component id="addCarButton" min="-2" pref="38" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="43" max="32767" attributes="0"/>
+                      <EmptySpace pref="48" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -554,54 +554,7 @@
             <Component class="javax.swing.JComboBox" name="makeComboBox">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="46">
-                    <StringItem index="0" value="Acura"/>
-                    <StringItem index="1" value="Alfa Romeo"/>
-                    <StringItem index="2" value="Aston Martin"/>
-                    <StringItem index="3" value="Audi"/>
-                    <StringItem index="4" value="Bentley"/>
-                    <StringItem index="5" value="BMW"/>
-                    <StringItem index="6" value="Buick"/>
-                    <StringItem index="7" value="Cadillac"/>
-                    <StringItem index="8" value="Chevrolet"/>
-                    <StringItem index="9" value="Chrysler"/>
-                    <StringItem index="10" value="Dodge"/>
-                    <StringItem index="11" value="Ferrari"/>
-                    <StringItem index="12" value="Fiat"/>
-                    <StringItem index="13" value="Ford"/>
-                    <StringItem index="14" value="Genesis"/>
-                    <StringItem index="15" value="GMC"/>
-                    <StringItem index="16" value="Honda"/>
-                    <StringItem index="17" value="Hyundai"/>
-                    <StringItem index="18" value="Infiniti"/>
-                    <StringItem index="19" value="Jaguar"/>
-                    <StringItem index="20" value="Jeep"/>
-                    <StringItem index="21" value="Kia"/>
-                    <StringItem index="22" value="Lamborghini"/>
-                    <StringItem index="23" value="Land Rover"/>
-                    <StringItem index="24" value="Lexus"/>
-                    <StringItem index="25" value="Lincoln"/>
-                    <StringItem index="26" value="Maserati"/>
-                    <StringItem index="27" value="Mazda"/>
-                    <StringItem index="28" value="McLaren"/>
-                    <StringItem index="29" value="Mercedes-Benz"/>
-                    <StringItem index="30" value="Mercury"/>
-                    <StringItem index="31" value="MINI"/>
-                    <StringItem index="32" value="Mitsubishi"/>
-                    <StringItem index="33" value="Nissan"/>
-                    <StringItem index="34" value="Pontiac"/>
-                    <StringItem index="35" value="Porsche"/>
-                    <StringItem index="36" value="RAM"/>
-                    <StringItem index="37" value="Rolls-Royce"/>
-                    <StringItem index="38" value="Saturn"/>
-                    <StringItem index="39" value="Scion"/>
-                    <StringItem index="40" value="Smart"/>
-                    <StringItem index="41" value="Subaru"/>
-                    <StringItem index="42" value="Tesla"/>
-                    <StringItem index="43" value="Toyota"/>
-                    <StringItem index="44" value="Volkswagen"/>
-                    <StringItem index="45" value="Volvo"/>
-                  </StringArray>
+                  <StringArray count="0"/>
                 </Property>
                 <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
@@ -659,7 +612,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane" min="-2" pref="559" max="-2" attributes="0"/>
+                          <Component id="jScrollPane" min="-2" pref="632" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="enterVINLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -668,7 +621,7 @@
                               <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="93" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -682,7 +635,7 @@
                           <Component id="searchButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane" pref="408" max="32767" attributes="0"/>
+                      <Component id="jScrollPane" pref="413" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="removeCarButton" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -746,49 +699,45 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="vinUpdateTabTextField" min="-2" pref="288" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="searchUpdateTabButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="192" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="addCarPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="updateCarPanel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="vinUpdateTabTextField" min="-2" pref="288" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="searchUpdateTabButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace pref="17" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="vinUpdateTabTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="searchUpdateTabButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="vinUpdateTabTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="searchUpdateTabButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="493" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="71" max="32767" attributes="0"/>
-                          <Component id="addCarPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="71" max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="updateCarPanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="69" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Enter VIN"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JTextField" name="vinUpdateTabTextField">
             </Component>
             <Component class="javax.swing.JButton" name="searchUpdateTabButton">
@@ -799,7 +748,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchUpdateTabButtonActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JPanel" name="addCarPanel1">
+            <Container class="javax.swing.JPanel" name="updateCarPanel">
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="updateCarPanel"/>
+                </Property>
+              </AccessibilityProperties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -826,12 +780,10 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="vinUpdateTextField" alignment="1" max="32767" attributes="0"/>
-                              <Component id="modelUpdateTextField" alignment="1" max="32767" attributes="0"/>
                               <Component id="yearUpdateTextField" alignment="1" max="32767" attributes="0"/>
                               <Component id="colorUpdateTextField" alignment="1" max="32767" attributes="0"/>
                               <Component id="priceUpdateTextField" alignment="1" max="32767" attributes="0"/>
                               <Component id="weightUpdateTextField" alignment="1" max="32767" attributes="0"/>
-                              <Component id="makeUpdateComboBox" alignment="1" pref="162" max="32767" attributes="0"/>
                               <Component id="bodyStyleUpdateComboBox" alignment="0" max="32767" attributes="0"/>
                               <Component id="mileageUpdateTextField" alignment="0" max="32767" attributes="0"/>
                               <Component id="fuelTypeUpdateComboBox" alignment="0" max="32767" attributes="0"/>
@@ -839,53 +791,46 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Component id="carLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="99" max="32767" attributes="0"/>
                               </Group>
+                              <Component id="makeUpdateComboBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="modelUpdateComboBox" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="horsepowerLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="torqueLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="typeLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="transModelLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="transModelUpdateTextField" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
-                                                          <Component id="transTypeUpdateComboBox" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="engineModelLabel1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                                                      <Component id="engineModelUpdateTextField" max="32767" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="transmissionLabel1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                              </Group>
+                                          <Component id="transmissionLabel1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="numOfCylindersLabel1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="engineModelLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="engineModelUpdateTextField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="numOfCylindersUpdateComboBox" pref="204" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="torqueLabel1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="numOfCylindersLabel1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="numOfCylindersUpdateComboBox" min="-2" pref="178" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="typeLabel1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="transModelLabel1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="transModelUpdateTextField" max="32767" attributes="0"/>
+                                              <Component id="transTypeUpdateComboBox" max="32767" attributes="0"/>
+                                          </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -895,8 +840,8 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                           <Component id="numOfGearsLabel1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="numOfGearsUpdateComboBox" min="-2" pref="175" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="numOfGearsUpdateComboBox" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -917,8 +862,14 @@
                                                   <Component id="updateCarButton" min="-2" pref="151" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="horsepowerUpdateTextField" alignment="1" min="-2" pref="171" max="-2" attributes="0"/>
-                                              <Component id="torqueUpdateTextField" alignment="1" min="-2" pref="171" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="horsepowerLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="torqueUpdateTextField" alignment="1" pref="204" max="32767" attributes="0"/>
+                                                      <Component id="horsepowerUpdateTextField" alignment="1" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -947,35 +898,30 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="modelUpdateTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="makeLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="makeUpdateComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="modelLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="modelUpdateComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="makeUpdateComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="makeLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="numOfCylindersUpdateComboBox" min="-2" max="-2" attributes="0"/>
-                                              <Component id="numOfCylindersLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <Component id="numOfCylindersUpdateComboBox" min="-2" max="-2" attributes="0"/>
+                                      <Component id="numOfCylindersLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="engineModelUpdateTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="engineModelLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="engineModelLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="engineModelUpdateTextField" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -985,7 +931,7 @@
                                       <Component id="yearUpdateTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="yearLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="horsepowerUpdateTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="horsepowerLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="horsepowerLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1018,15 +964,15 @@
                                           <Component id="transTypeUpdateComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="bodyStyleUpdateComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="transModelLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="bodyStyleUpdateComboBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="transModelLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <Component id="transModelUpdateTextField" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="mileageLabel1" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -1170,8 +1116,6 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="vinUpdateTextField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="modelUpdateTextField">
-                </Component>
                 <Component class="javax.swing.JTextField" name="yearUpdateTextField">
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="yearUpdateTextFieldActionPerformed"/>
@@ -1212,6 +1156,7 @@
                         <StringItem index="4" value="4WD"/>
                       </StringArray>
                     </Property>
+                    <Property name="selectedIndex" type="int" value="-1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1232,6 +1177,7 @@
                         <StringItem index="8" value="Van"/>
                       </StringArray>
                     </Property>
+                    <Property name="selectedIndex" type="int" value="-1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1248,6 +1194,7 @@
                         <StringItem index="4" value="Natural Gas"/>
                       </StringArray>
                     </Property>
+                    <Property name="selectedIndex" type="int" value="-1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1269,6 +1216,7 @@
                         <StringItem index="8" value="12"/>
                       </StringArray>
                     </Property>
+                    <Property name="selectedIndex" type="int" value="-1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1285,6 +1233,7 @@
                         <StringItem index="3" value="CVT"/>
                       </StringArray>
                     </Property>
+                    <Property name="selectedIndex" type="int" value="-1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1307,63 +1256,7 @@
                         <StringItem index="9" value="10"/>
                       </StringArray>
                     </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="makeUpdateComboBox">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="46">
-                        <StringItem index="0" value="Acura"/>
-                        <StringItem index="1" value="Alfa Romeo"/>
-                        <StringItem index="2" value="Aston Martin"/>
-                        <StringItem index="3" value="Audi"/>
-                        <StringItem index="4" value="Bentley"/>
-                        <StringItem index="5" value="BMW"/>
-                        <StringItem index="6" value="Buick"/>
-                        <StringItem index="7" value="Cadillac"/>
-                        <StringItem index="8" value="Chevrolet"/>
-                        <StringItem index="9" value="Chrysler"/>
-                        <StringItem index="10" value="Dodge"/>
-                        <StringItem index="11" value="Ferrari"/>
-                        <StringItem index="12" value="Fiat"/>
-                        <StringItem index="13" value="Ford"/>
-                        <StringItem index="14" value="Genesis"/>
-                        <StringItem index="15" value="GMC"/>
-                        <StringItem index="16" value="Honda"/>
-                        <StringItem index="17" value="Hyundai"/>
-                        <StringItem index="18" value="Infiniti"/>
-                        <StringItem index="19" value="Jaguar"/>
-                        <StringItem index="20" value="Jeep"/>
-                        <StringItem index="21" value="Kia"/>
-                        <StringItem index="22" value="Lamborghini"/>
-                        <StringItem index="23" value="Land Rover"/>
-                        <StringItem index="24" value="Lexus"/>
-                        <StringItem index="25" value="Lincoln"/>
-                        <StringItem index="26" value="Maserati"/>
-                        <StringItem index="27" value="Mazda"/>
-                        <StringItem index="28" value="McLaren"/>
-                        <StringItem index="29" value="Mercedes-Benz"/>
-                        <StringItem index="30" value="Mercury"/>
-                        <StringItem index="31" value="MINI"/>
-                        <StringItem index="32" value="Mitsubishi"/>
-                        <StringItem index="33" value="Nissan"/>
-                        <StringItem index="34" value="Pontiac"/>
-                        <StringItem index="35" value="Porsche"/>
-                        <StringItem index="36" value="RAM"/>
-                        <StringItem index="37" value="Rolls-Royce"/>
-                        <StringItem index="38" value="Saturn"/>
-                        <StringItem index="39" value="Scion"/>
-                        <StringItem index="40" value="Smart"/>
-                        <StringItem index="41" value="Subaru"/>
-                        <StringItem index="42" value="Tesla"/>
-                        <StringItem index="43" value="Toyota"/>
-                        <StringItem index="44" value="Volkswagen"/>
-                        <StringItem index="45" value="Volvo"/>
-                      </StringArray>
-                    </Property>
+                    <Property name="selectedIndex" type="int" value="-1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1377,8 +1270,33 @@
                     <Property name="text" type="java.lang.String" value="Engine"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="makeUpdateComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="modelUpdateComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enter VIN"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="listInventoryPanel">
@@ -1411,7 +1329,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="loadButton" min="-2" pref="41" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="449" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="454" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
