@@ -1,5 +1,6 @@
 package carinventory;
 
+import java.util.ArrayList;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -139,7 +140,33 @@ public class DBAccessTest {
         assertEquals(NUM_OF_GEARS, result.getTransmission().getNumOfGears());
         
     }
-
+    
+    
+       /**
+     * Test of retrieveByVIN method, of class DBAccess.
+     */
+    @Test
+    public void testRetrieveManufacturers() {
+        
+        System.out.println("retrieveManufacturers");
+        ArrayList<String> result = DBAccess.retrieveManufacturers();
+        
+        assertEquals(MAKE, result.get(0));
+ 
+    }
+    
+    
+           /**
+     * Test of retrieveByVIN method, of class DBAccess.
+     */
+    @Test
+    public void testRetrieveNumOfManufacturersCars() {
+        
+        System.out.println("retrieveNumOfManufacturersCars");
+        int result = DBAccess.retrieveNumOfManufacturersCars(MAKE);
+        
+        assertEquals(1, result);
+    }
 
    /**
      * Test of updateCar method, of class DBAccess.
@@ -182,4 +209,6 @@ public class DBAccessTest {
         Boolean result = DBAccess.deleteCar("BNR34111111111111");
         assertEquals(expResult, result);
     }   
+    
+    
 }

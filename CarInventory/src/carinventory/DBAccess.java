@@ -453,5 +453,75 @@ public class DBAccess {
               return false;}
         
         return !(result1 == 0 || result2==0 || result3==0);
-      }    
+      }   
+        
+        
+            /**
+       * Lists all the manufacturers in the DB
+       * If SQLException is caught, exception is logged
+       * If NumberFormatException is caught, returns false
+       * @return ArrayList of manufacturers
+       */
+        public static ArrayList<String> retrieveManufacturers() {
+       
+          ArrayList<String> manufacturers = new ArrayList<>();
+          String query = ("select distinct make from car");
+          
+          System.out.println("retrieveManufacturers = " + query);
+          LOGGER.log(Level.INFO, "retrieveManufacturers = {0}", query);
+          try{
+          conn = DBConnection.getMyConnection();
+              try (Statement stmt = conn.createStatement()) {
+                  ResultSet rs = stmt.executeQuery(query);
+//                  if (!rs.next())
+//                      manufacturers = null;   //no manufacturers
+//                  else{
+                      while(rs.next()){  
+                        manufacturers.add(rs.getString("make"));
+                      }
+//                  }   
+              }
+            
+          }
+          
+          catch (SQLException sql){
+              LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+          }
+          
+          return manufacturers;
+      } 
+        
+        
+        
+                /**
+       * Lists all the cars in the DB
+       * If SQLException is caught, exception is logged
+       * If NumberFormatException is caught, returns false
+       * @return ArrayList of cars
+       */
+        public static int retrieveNumOfManufacturersCars(String manufacturer) {
+          int num =0;
+          String query = ("select count(make) from car where make = " + QUOTE + manufacturer + QUOTE);
+          
+          System.out.println("retrieveNumOfManufacturersCars = " + query);
+          LOGGER.log(Level.INFO, "retrieveNumOfManufacturersCars = {0}", query);
+          try{
+          conn = DBConnection.getMyConnection();
+              try (Statement stmt = conn.createStatement()) {
+                  ResultSet rs = stmt.executeQuery(query);
+                  if (!rs.next())
+                      num = 0;   //no manufacturers
+                  else{
+                      num = rs.getInt(1);
+                  }   
+              }
+            
+          }
+          
+          catch (SQLException sql){
+              LOGGER.log(Level.SEVERE,"SQLException occured", sql);
+          }
+          
+          return num;
+      } 
 }
